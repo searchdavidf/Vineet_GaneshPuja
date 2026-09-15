@@ -507,6 +507,85 @@ const SONGS = [
           "Daas khade dwar tere, dukhon ko mita jaao."
         ]
       }
+      
+  // ========================================================
+  // 6. GAURI ke laal daya
+  // ========================================================
+      {
+  id: "gauri-ke-laal-dayal-ganesh",
+  type: "Ganesh Bhajan",
+
+  title: {
+    devanagari: "गौरी के लाल दयाल गणेश",
+    roman: "Gauri Ke Laal Dayal Ganesh"
+  },
+
+  verses: [
+    {
+      devanagari: [
+        "गौरी के लाल दयाल गणेश, लिए संग मूषक आय रहे हैं।",
+        "शीश मुकुट अति शोभित सुंदर, रूप अनूप सजाय रहे हैं।",
+        "देव-दनुज नर-किन्नर कोटिक, सब मिल मंगल गाय रहे हैं।",
+        "जय-जयकार भई तिहुं लोक, वो प्रथम पूज्य कहाय रहे हैं।"
+      ],
+
+      roman: [
+        "Gauri ke laal dayal Ganesh, liye sang mooshak aaye rahe hain.",
+        "Sheesh mukut ati shobhit sundar, roop anoop sajaye rahe hain.",
+        "Dev-danuj nar-kinnar kotik, sab mil mangal gaaye rahe hain.",
+        "Jai-jaikaar bhayi tihun lok, vo pratham poojya kahaye rahe hain."
+      ]
+    },
+
+    {
+      devanagari: [
+        "पाश अंकुश कर में सोहे, मोदक भोग लगाय रहे हैं।",
+        "रिद्धि-सिद्धि संग साजे स्वामी, सब पर कृपा लुटाय रहे हैं।",
+        "विघ्न विनाशक मंगल दाता, संकट दूर भगाय रहे हैं।",
+        "जय-जयकार भई तिहुं लोक, वो प्रथम पूज्य कहाय रहे हैं।"
+      ],
+
+      roman: [
+        "Paash ankush kar mein sohe, modak bhog lagaye rahe hain.",
+        "Riddhi-Siddhi sang saaje Swami, sab par kripa lutaye rahe hain.",
+        "Vighna vinashak mangal data, sankat door bhagaye rahe hain.",
+        "Jai-jaikaar bhayi tihun lok, vo pratham poojya kahaye rahe hain."
+      ]
+    },
+
+    {
+      devanagari: [
+        "एकदंत शुभ तिलक ललाटा, भाल पे चंद्र सजाय रहे हैं।",
+        "मंद-मंद मुसकावत मूरति, सबका मन हरषाय रहे हैं।",
+        "शरण पड़े जो चरणन में प्रभु, ताके काज बनाय रहे हैं।",
+        "जय-जयकार भई तिहुं लोक, वो प्रथम पूज्य कहाय रहे हैं।"
+      ],
+
+      roman: [
+        "Ekadant shubh tilak lalaata, bhaal pe chandra sajaye rahe hain.",
+        "Mand-mand muskaavat moorati, sabka man harshaye rahe hain.",
+        "Sharan pade jo charanan mein Prabhu, taake kaaj banaye rahe hain.",
+        "Jai-jaikaar bhayi tihun lok, vo pratham poojya kahaye rahe hain."
+      ]
+    },
+
+    {
+      devanagari: [
+        "अंग सिंदूर की कांति सुहानी, दुष्टन तेज नसानी रहे हैं।",
+        "ज्ञान-बुद्धि के सागर स्वामी, जन-जन ढोल बजाय रहे हैं।",
+        "दास अमोल करे नित सेवा, भक्ति का दान दिलाय रहे हैं।",
+        "जय-जयकार भई तिहुं लोक, वो प्रथम पूज्य कहाय रहे हैं।"
+      ],
+
+      roman: [
+        "Ang sindoor ki kaanti suhaani, dushtan tej nasaani rahe hain.",
+        "Gyaan-buddhi ke saagar Swami, jan-jan dhol bajaye rahe hain.",
+        "Daas Amol kare nit seva, bhakti ka daan dilaye rahe hain.",
+        "Jai-jaikaar bhayi tihun lok, vo pratham poojya kahaye rahe hain."
+      ]
+    }
+  ]
+}
     ]
   }
 
