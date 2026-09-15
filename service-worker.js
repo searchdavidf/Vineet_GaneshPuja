@@ -1,4 +1,4 @@
-const CACHE = "ganesh-songs-v2";
+const CACHE = "ganesh-songs-v4";
 const ASSETS = [
   "./",
   "./index.html",

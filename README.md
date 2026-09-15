@@ -130,3 +130,25 @@ const CACHE = "ganesh-songs-v2";
 ```
 
 This helps visitors receive the latest version after deployment.
+
+
+## V3 UX changes
+
+- Every browser refresh now resets to the welcome screen.
+- Song number, selected script and font size are intentionally not restored.
+- Welcome text and language choices appear before the invitation on mobile.
+- Invitation height is capped on mobile so it cannot hide instructions.
+- A large "Select Aarti / Bhajan" control is always visible on the reader screen.
+- Horizontal quick song chips make direct song switching easier.
+- Font-size controls (A− / A / A+) are always visible on the reader screen.
+- The Settings drawer still contains larger reading controls and screen wake lock.
+
+
+## V4 reading improvements
+
+- Added adjustable lyrics line spacing.
+- Three spacing modes: Compact, Comfortable, Spacious.
+- Verse spacing changes together with line spacing.
+- Quick spacing control is visible beside the font-size controls.
+- Full spacing selector is also available in Reading Settings.
+- Spacing resets to Comfortable on every page refresh.
