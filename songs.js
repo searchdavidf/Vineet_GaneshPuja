@@ -417,44 +417,86 @@ const SONGS = [
   // ========================================================
   // 5. SHREE GANESH PANCHARATNAM
   // ========================================================
-  {
-    id: "shree-ganesh-pancharatnam",
-    type: "Ganesh Stotram",
-    title: {
-      devanagari: "श्री गणेश पञ्चरत्नम्",
-      roman: "Shree Ganesh Pancharatnam"
-    },
-    verses: [
-      {
-        devanagari: [
-          "मुदाकरात्तमोदकं सदा विमुक्तिसाधकं",
-          "कलाधरावतंसकं विलासिलोकरक्षकम्।",
-          "अनायकैकनायकं विनाशितेभदैत्यकं",
-          "नताशुभाशुनाशकं नमामि तं विनायकम्॥"
-        ],
-        roman: [
-          "Muda Karatta Modakam Sada Vimukti Sadhakam",
-          "Kala Dharavatansakam Vilasi Loka Rakshakam |",
-          "Anayakaika Nayakam Vinashita Ibha Daityakam",
-          "Nata Ashubhashu Nashakam Namami Tam Vinayakam ||"
-        ]
-      },
-      {
-        devanagari: [
-          "नतेतरातिभीकरं नवोदितार्कभास्वरं",
-          "नमत्सुरारिनिर्जरं नताधिकापदुद्धरम्।",
-          "सुरेश्वरं नीतेश्वरं गजेश्वरं गणेश्वरं",
-          "महेश्वरं तमाश्रये परात्परं निरंतरम्॥"
-        ],
-        roman: [
-          "Natetarati Bheekaram Navoditarka Bhasvaram",
-          "Namatsurar Nirjaram Natadhikapaduddharam |",
-          "Sureshvaram Niteeshvaram Gajeshvaram Ganeshavaram",
-          "Maheshvaram Tamashraye Paratparam Nirantaram ||"
-        ]
-      }
-    ]
+ {
+  "id": "ganesha-pancharatnam",
+  "type": "Ganesh Stotra",
+  "title": {
+    "devanagari": "॥ गणेश पञ्चरत्नम् (मुदाकरात्त मोदकं) ॥",
+    "roman": "Ganesha Pancharatnam (Mudakaratta Modakam)"
   },
+  "verses": [
+    {
+      "devanagari": [
+        "मुदाकरात्तमोदकं सदा विमुक्तिसाधकं",
+        "कलाधरावतंसकं विलासिलोकरक्षकम् ।",
+        "अनायकैकनायकं विनाशितेभदैत्यकं",
+        "नताशुभाशुनाशकं नमामि तं विनायकम् ॥ १ ॥"
+      ],
+      "roman": [
+        "Mudakaratta Modakam Sada Vimukti Sadhakam",
+        "Kaladharavatamsakam Vilasi Loka Rakshakam |",
+        "Anayakaika Nayakam Vinashitebha Daityakam",
+        "Natashubhashu Nashakam Namami Tam Vinayakam || 1 ||"
+      ]
+    },
+    {
+      "devanagari": [
+        "नतेतरातिभीकरं नवोदितार्कभास्वरं",
+        "नमत्सुरारिनिर्जरं नताधिकारिउद्धरम् ।",
+        "वेश्वरं गनेश्वरं गजेश्वरं सिंचेश्वरं",
+        "मयूरपिञ्चभूषणम् समाहितं समाहितम् ॥ २ ॥"
+      ],
+      "roman": [
+        "Natetarati Bheekaram Navoditarka Bhaswaram",
+        "Namatsurarinarjakam Natadhikari Uddharam |",
+        "Veshwaram Ganeshwaram Gajeshwaram Sincheswaram",
+        "Mayura Pinchhabhooshanam Samahitam Samahitam || 2 ||"
+      ]
+    },
+    {
+      "devanagari": [
+        "समस्तलोकशङ्करं निरस्तदैत्यकुञ्जरं",
+        "दरेतरोदरं वरं वरेभवक्त्रमक्षरम् ।",
+        "कृपाकरं क्षमाकरं मुदाकरं यशस्करं",
+        "मनस्करं नमस्कृतां नमस्करोमि भास्वरम् ॥ ३ ॥"
+      ],
+      "roman": [
+        "Samasta Loka Shankaram Nirasta Daitya Kunjaram",
+        "Daretarodaram Varam Varebhavaktramaksharam |",
+        "Kripakaram Kshamakaram Mudakaram Yashaskaram",
+        "Manaskaram Namaskritam Namaskaromi Bhaswaram || 3 ||"
+      ]
+    },
+    {
+      "devanagari": [
+        "अकिञ्चनार्तिमार्जनं चिरन्तनोक्तिभाजनं",
+        "पुरारिपूर्वनन्दनं सुरारिगर्वचर्वणम् ।",
+        "प्रपञ्चनाशभीषणं धनञ्जयादिभूषणं",
+        "कपोलदानवारणं भजे पुराणवारणम् ॥ ४ ॥"
+      ],
+      "roman": [
+        "Akinchanarti Marjanam Chirantanokti Bhajanam",
+        "Purari Poorva Nandanam Surari Garva Charvanam |",
+        "Prapancha Nasha Bheeshanam Dhananjayadi Bhooshanam",
+        "Kapola Dana Varanam Bhaje Purana Varanam || 4 ||"
+      ]
+    },
+    {
+      "devanagari": [
+        "नितान्तकान्तदन्तकान्तिमन्तकान्तकात्मजं",
+        "अचिन्त्यरूपमन्तहीनमन्तरायकृन्तनम् ।",
+        "ह्रुदन्तरे निरन्तरं वसन्तमेव योगिनां",
+        "तमेकदन्तमेव तं विचिन्तयामि सन्ततम् ॥ ५ ॥"
+      ],
+      "roman": [
+        "Nitanta Kanta Danta Kanti Mantakantakatmajam",
+        "Achintya Roopam Anta Heenam Antaraya Krintanam |",
+        "Hrudantare Nirantaram Vasantam Eva Yoginam",
+        "Tam Ekadantam Eva Tam Vichintayami Santatam || 5 ||"
+      ]
+    }
+  ]
+}
 
   // ========================================================
   // 6. GAURA TERA LAAL
@@ -507,6 +549,82 @@ const SONGS = [
           "Daas khade dwar tere, dukhon ko mita jaao."
         ]
       }
+      {
+  "id": "shri-ganesh-stuti",
+  "type": "Ganesh Stuti",
+  "title": {
+    "devanagari": "॥ श्री गणेश स्तुति ॥",
+    "roman": "Shri Ganesh Stuti"
+  },
+  "verses": [
+    {
+      "devanagari": [
+        "हे गणेश गौरीपुत्र एकदन्त महावीर,",
+        "लम्बोदर भालचन्द्र, सृष्टि के विधाता हैं।",
+        "वे प्रथम पूजनीय देवों में हैं सर्वश्रेष्ठ,",
+        "देते ध्यान उसपे हैं, ध्यान जो लगाता है।",
+        "विघ्न के विनाशक हैं स्वामी रिद्धि-सिद्धि के हैं,",
+        "आता जो भी सामने है शीश वो झुकाता है।",
+        "सच्चे मन से पुकारे आपको जो उसका तो,",
+        "हर एक काम बिन बाधा बन जाता है।"
+      ],
+      "roman": [
+        "He Ganesh Gauriputra Ekdanta Mahaveer,",
+        "Lambodara Bhalachandra, Srishti Ke Vidhata Hain.",
+        "Ve Pratham Poojaniya Devon Mein Hain Sarvashreshtha,",
+        "Dete Dhyan Uspe Hain, Dhyan Jo Lagata Hai.",
+        "Vighna Ke Vinashak Hain Swami Riddhi-Siddhi Ke Hain,",
+        "Aata Jo Bhi Samne Hai Sheesh Vo Jhukata Hai.",
+        "Sacche Man Se Pukare Aapko Jo Uska To,",
+        "Har Ek Kaam Bin Badha Ban Jata Hai."
+      ]
+    },
+    {
+      "devanagari": [
+        "अष्टसिद्धि-बुद्धि-ज्ञान-भक्ति के निधान प्रभु,",
+        "चरणों में आपकी जो प्रीति नित लगाता है।",
+        "मूषक की असवारी साजे, मोदक अति प्यारे लगे,",
+        "जन-जन के जीवन से संकट मिटाता है।",
+        "मोहि-मोहि रूप देखि जग यह निहाल होवे,",
+        "नाम तेरा जप के ही भव तर जाता है।",
+        "सच्चे मन से पुकारे आपको जो उसका तो,",
+        "हर एक काम बिन बाधा बन जाता है।"
+      ],
+      "roman": [
+        "Ashtasiddhi-Buddhi-Gyan-Bhakti Ke Nidhan Prabhu,",
+        "Charanon Mein Aapki Jo Preeti Nit Lagata Hai.",
+        "Mooshak Ki Asavari Saje, Modak Ati Pyare Lage,",
+        "Jan-Jan Ke Jeevan Se Sankat Mitata Hai.",
+        "Mohi-Mohi Roop Dekhi Jag Yah Nihal Hove,",
+        "Naam Tera Jap Ke Hee Bhav Tar Jata Hai.",
+        "Sacche Man Se Pukare Aapko Jo Uska To,",
+        "Har Ek Kaam Bin Badha Ban Jata Hai."
+      ]
+    },
+    {
+      "devanagari": [
+        "गौरीपुत्र विघ्नराज ज्ञान के आगार स्वामी,",
+        "शरण तिहारी जो भी श्रद्धा से आता है।",
+        "सिंदूर सोहे अंग, माथे चंद्र की छटा न्यारी,",
+        "भक्तन के हेत प्रभु संकट उठाता है।",
+        "मंगलमयी मूरति से पावन दिशाएँ होवें,",
+        "सकल मनोरथ को पल में पुराता है।",
+        "सच्चे मन से पुकारे आपको जो उसका तो,",
+        "हर एक काम बिन बाधा बन जाता है।"
+      ],
+      "roman": [
+        "Gauriputra Vighnaraj Gyan Ke Aagar Swami,",
+        "Sharan Tihari Jo Bhi Shraddha Se Aata Hai.",
+        "Sindoor Sohe Ang, Mathe Chandra Ki Chhata Nyari,",
+        "Bhaktan Ke Het Prabhu Sankat Uthata Hai.",
+        "Mangalamayi Murati Se Pawan Dishaen Hoven,",
+        "Sakal Manorath Ko Pal Mein Purata Hai.",
+        "Sacche Man Se Pukare Aapko Jo Uska To,",
+        "Har Ek Kaam Bin Badha Ban Jata Hai."
+      ]
+    }
+  ]
+}
     ]
   }
 
