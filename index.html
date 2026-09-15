@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#64181c" />
+  <meta name="theme-color" content="#6a171b" />
   <meta name="description" content="Ganesh Chaturthi Aarti & Bhajan lyrics in Devanagari and English script." />
   <title>Ganesh Chaturthi Songs</title>
 
@@ -16,14 +16,12 @@
 <body>
   <main id="app">
 
-    <!-- ===================== WELCOME ===================== -->
+    <!-- WELCOME -->
     <section id="welcomeView" class="view view-active welcome-view" aria-labelledby="welcomeTitle">
-      <div class="welcome-background" aria-hidden="true"></div>
-
       <div class="welcome-shell">
         <div class="welcome-copy-panel reveal">
           <p class="festival-kicker">श्री गणेशाय नमः</p>
-          <h1 id="welcomeTitle">Welcome to our<br><span>Ganesh Chaturthi</span></h1>
+          <h1 id="welcomeTitle">Welcome to our <span>Ganesh Chaturthi</span></h1>
           <p class="welcome-copy">
             Join us in aarti and bhajans. Choose the script you are most comfortable reading.
           </p>
@@ -31,16 +29,13 @@
           <div class="start-card">
             <p class="start-label">Choose lyrics language</p>
             <div class="language-grid" role="group" aria-label="Choose lyrics script">
-              <button class="language-card primary-language" data-language="devanagari">
+              <button class="language-card" data-language="devanagari">
                 <span class="language-symbol">अ</span>
                 <span><strong>हिन्दी</strong><small>देवनागरी</small></span>
-                <span class="language-arrow">→</span>
               </button>
-
               <button class="language-card" data-language="roman">
                 <span class="language-symbol">A</span>
                 <span><strong>English</strong><small>Roman script</small></span>
-                <span class="language-arrow">→</span>
               </button>
             </div>
             <p class="tap-hint">Tap a language to begin the first aarti</p>
@@ -51,77 +46,61 @@
 
         <div class="poster-wrap reveal reveal-delay">
           <div class="poster-label">Our Invitation</div>
-          <img
-            class="invite-poster"
-            src="assets/invitation.jpeg"
-            alt="Ganesh Chaturthi invitation"
-            loading="eager"
-          />
+          <img class="invite-poster" src="assets/invitation.jpeg" alt="Ganesh Chaturthi invitation" loading="eager" />
         </div>
       </div>
     </section>
 
-    <!-- ===================== READER ===================== -->
+    <!-- READER -->
     <section id="readerView" class="view reader-view" aria-live="polite">
-      <header class="topbar">
-        <button id="homeBtn" class="icon-btn" aria-label="Back to welcome">⌂</button>
-        <div class="topbar-center">
-          <span id="songType" class="eyebrow"></span>
-          <span id="progressText" class="progress-text"></span>
-        </div>
-        <button id="scriptBtn" class="script-pill" aria-label="Change script">
+      <header class="reader-header">
+        <button id="homeBtn" class="header-icon-btn" aria-label="Back to welcome">⌂</button>
+
+        <button id="songPickerBtn" class="song-picker-head" aria-label="Choose song">
+          <span id="songType">Ganesh Aarti</span>
+          <strong id="headerSongTitle">Song title</strong>
+        </button>
+
+        <button id="scriptBtn" class="language-pill" aria-label="Change script">
           <span id="scriptPillText">हिन्दी</span>
-          <span>⌄</span>
+          <span class="caret">⌄</span>
         </button>
       </header>
 
-      <!-- Always visible quick controls -->
-      <div class="quick-tools">
-        <button id="chooseSongBtn" class="choose-song-btn">
-          <span class="choose-song-icon">♫</span>
-          <span class="choose-song-copy">
-            <small>Select Aarti / Bhajan</small>
-            <strong id="currentSongQuickTitle">Choose song</strong>
-          </span>
-          <span class="chevron">⌄</span>
-        </button>
-
-        <div class="reader-quick-actions">
-          <div class="font-quick" aria-label="Lyrics font size">
-            <button id="fontQuickDown" aria-label="Decrease lyrics size">A−</button>
-            <button id="fontQuickReset" aria-label="Reset lyrics size">A</button>
-            <button id="fontQuickUp" aria-label="Increase lyrics size">A+</button>
-          </div>
-
-          <button id="spacingQuickBtn" class="spacing-quick-btn" aria-label="Change lyrics spacing">
-            <span class="spacing-icon">↕</span>
-            <span id="spacingQuickText">Comfort</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Easy direct song selector -->
-      <div id="songChips" class="song-chips" aria-label="Quick song selection"></div>
-
       <div class="reader-shell">
         <div class="song-heading">
-          <p id="songPositionBadge" class="song-position-badge"></p>
+          <p id="songPositionBadge" class="song-position-badge">1 of 6</p>
           <h2 id="songTitle"></h2>
-          <div class="ornament"><span></span>✦<span></span></div>
+          <div class="title-rule"><span></span><b>✦</b><span></span></div>
         </div>
-        <article id="lyrics" class="lyrics" tabindex="0"></article>
-      </div>
 
-      <nav class="bottom-dock" aria-label="Song navigation">
-        <button id="songsBtn" class="dock-btn labeled-dock" aria-label="Open song list"><span>☰</span><small>Songs</small></button>
-        <button id="prevBtn" class="dock-btn" aria-label="Previous song">‹</button>
-        <button id="counterBtn" class="counter-btn" aria-label="Current song position">1 / 1</button>
-        <button id="nextBtn" class="dock-btn" aria-label="Next song">›</button>
-        <button id="settingsBtn" class="dock-btn labeled-dock" aria-label="Reading settings"><span>Aa</span><small>Read</small></button>
-      </nav>
+        <article id="lyrics" class="lyrics" tabindex="0"></article>
+
+        <!-- Appears naturally only at the end of the song -->
+        <section class="end-controls" aria-label="End of song controls">
+          <p class="end-label">End of song</p>
+
+          <div class="end-nav">
+            <button id="prevBtn" class="nav-btn secondary-nav">
+              <span class="nav-arrow">‹</span>
+              <span><small>Previous</small><strong id="prevSongLabel">Previous song</strong></span>
+            </button>
+
+            <button id="nextBtn" class="nav-btn primary-nav">
+              <span><small>Next</small><strong id="nextSongLabel">Next song</strong></span>
+              <span class="nav-arrow">›</span>
+            </button>
+          </div>
+
+          <div class="end-actions">
+            <button id="songsBtn" class="simple-action">☰ All Songs</button>
+            <button id="formatBtn" class="simple-action">Aa Reading</button>
+          </div>
+        </section>
+      </div>
     </section>
 
-    <!-- ===================== CLOSING ===================== -->
+    <!-- CLOSING -->
     <section id="closingView" class="view closing-view">
       <div class="closing-card reveal">
         <div class="closing-icon">🪷</div>
@@ -139,27 +118,31 @@
 
   <div id="drawerBackdrop" class="backdrop" hidden></div>
 
-  <!-- ===================== SONG DRAWER ===================== -->
-  <aside id="songDrawer" class="sheet song-sheet" aria-hidden="true" aria-label="All songs">
+  <!-- SONG DRAWER -->
+  <aside id="songDrawer" class="sheet" aria-hidden="true" aria-label="All songs">
     <div class="sheet-handle"></div>
-    <div class="sheet-header sticky-sheet-header">
+    <div class="sheet-header">
       <div>
         <p class="eyebrow">Ceremony order</p>
         <h3>Choose Aarti / Bhajan</h3>
       </div>
-      <button class="icon-btn" data-close-sheet="songDrawer" aria-label="Close">×</button>
+      <button class="header-icon-btn" data-close-sheet="songDrawer" aria-label="Close">×</button>
     </div>
-    <p class="sheet-help">Tap any title to open it instantly.</p>
+
     <div id="songList" class="song-list"></div>
   </aside>
 
-  <!-- ===================== SCRIPT SHEET ===================== -->
+  <!-- SCRIPT SHEET -->
   <aside id="scriptSheet" class="sheet compact-sheet" aria-hidden="true" aria-label="Lyrics script">
     <div class="sheet-handle"></div>
     <div class="sheet-header">
-      <div><p class="eyebrow">Reading</p><h3>Lyrics script</h3></div>
-      <button class="icon-btn" data-close-sheet="scriptSheet" aria-label="Close">×</button>
+      <div>
+        <p class="eyebrow">Reading</p>
+        <h3>Lyrics script</h3>
+      </div>
+      <button class="header-icon-btn" data-close-sheet="scriptSheet" aria-label="Close">×</button>
     </div>
+
     <div class="choice-list">
       <button class="choice-btn" data-script-choice="devanagari">
         <span>हिन्दी</span><small>Devanagari</small><b class="check">✓</b>
@@ -170,48 +153,40 @@
     </div>
   </aside>
 
-  <!-- ===================== SETTINGS SHEET ===================== -->
+  <!-- READING / FORMAT SHEET -->
   <aside id="settingsSheet" class="sheet compact-sheet" aria-hidden="true" aria-label="Reading settings">
     <div class="sheet-handle"></div>
     <div class="sheet-header">
-      <div><p class="eyebrow">Comfort</p><h3>Reading settings</h3></div>
-      <button class="icon-btn" data-close-sheet="settingsSheet" aria-label="Close">×</button>
+      <div>
+        <p class="eyebrow">Reading</p>
+        <h3>Reading comfort</h3>
+      </div>
+      <button class="header-icon-btn" data-close-sheet="settingsSheet" aria-label="Close">×</button>
     </div>
 
     <div class="settings-block">
-      <span>Lyrics text size</span>
-      <small class="setting-description">Make the lyrics comfortable to read from any distance.</small>
+      <span>Text size</span>
       <div class="font-controls">
-        <button id="fontDown" class="secondary-btn" aria-label="Decrease text size">A− Smaller</button>
-        <button id="fontReset" class="secondary-btn" aria-label="Reset text size">A Reset</button>
-        <button id="fontUp" class="secondary-btn" aria-label="Increase text size">A+ Larger</button>
+        <button id="fontDown" class="secondary-btn">A−</button>
+        <button id="fontReset" class="secondary-btn">A</button>
+        <button id="fontUp" class="secondary-btn">A+</button>
       </div>
     </div>
 
     <div class="settings-block">
-      <span>Lyrics spacing</span>
-      <small class="setting-description">Adjust the gap between lines and verses for easier tracking.</small>
-
+      <span>Line spacing</span>
       <div class="spacing-controls" role="group" aria-label="Lyrics spacing">
-        <button class="spacing-option" data-spacing="compact">
-          <span class="spacing-preview compact-preview">≡</span>
-          <strong>Compact</strong>
-        </button>
-
-        <button class="spacing-option selected" data-spacing="comfortable">
-          <span class="spacing-preview comfortable-preview">≡</span>
-          <strong>Comfortable</strong>
-        </button>
-
-        <button class="spacing-option" data-spacing="spacious">
-          <span class="spacing-preview spacious-preview">≡</span>
-          <strong>Spacious</strong>
-        </button>
+        <button class="spacing-option" data-spacing="compact">Compact</button>
+        <button class="spacing-option selected" data-spacing="comfortable">Comfortable</button>
+        <button class="spacing-option" data-spacing="spacious">Spacious</button>
       </div>
     </div>
 
     <div class="settings-block row">
-      <div><span>Keep screen awake</span><small>Useful during aarti</small></div>
+      <div>
+        <span>Keep screen awake</span>
+        <small>Useful during aarti</small>
+      </div>
       <button id="wakeBtn" class="toggle-btn" role="switch" aria-checked="false"><span></span></button>
     </div>
   </aside>

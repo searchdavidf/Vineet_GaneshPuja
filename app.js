@@ -8,12 +8,6 @@
     closing: $("#closingView")
   };
 
-  /*
-    IMPORTANT UX BEHAVIOUR:
-    State intentionally resets on every browser refresh.
-    Nothing about script, current song or font size is restored
-    from localStorage.
-  */
   const state = {
     script: "devanagari",
     currentIndex: 0,
@@ -25,18 +19,16 @@
 
   const songTitle = $("#songTitle");
   const songType = $("#songType");
-  const progressText = $("#progressText");
+  const headerSongTitle = $("#headerSongTitle");
+  const songPositionBadge = $("#songPositionBadge");
   const lyrics = $("#lyrics");
-  const counterBtn = $("#counterBtn");
+  const songList = $("#songList");
   const prevBtn = $("#prevBtn");
   const nextBtn = $("#nextBtn");
-  const songList = $("#songList");
-  const songChips = $("#songChips");
-  const backdrop = $("#drawerBackdrop");
-  const quickTitle = $("#currentSongQuickTitle");
+  const prevSongLabel = $("#prevSongLabel");
+  const nextSongLabel = $("#nextSongLabel");
   const scriptPillText = $("#scriptPillText");
-  const songPositionBadge = $("#songPositionBadge");
-  const spacingQuickText = $("#spacingQuickText");
+  const backdrop = $("#drawerBackdrop");
 
   function showView(name) {
     Object.entries(views).forEach(([key, el]) => {
@@ -65,36 +57,42 @@
     const title = getSongTitle(song);
 
     songTitle.textContent = title;
+    headerSongTitle.textContent = title;
     songType.textContent = song.type || "Aarti";
-    progressText.textContent = `${state.currentIndex + 1} of ${SONGS.length}`;
-    songPositionBadge.textContent = `Song ${state.currentIndex + 1} • ${song.type || "Aarti"}`;
-    counterBtn.textContent = `${state.currentIndex + 1} / ${SONGS.length}`;
-    quickTitle.textContent = title;
-
+    songPositionBadge.textContent = `${state.currentIndex + 1} of ${SONGS.length}`;
     scriptPillText.textContent = state.script === "devanagari" ? "हिन्दी" : "English";
 
     lyrics.innerHTML = (song.verses || []).map((verse, idx) => {
       const lines = verse[state.script] || [];
       const body = lines.map(line => `<p>${escapeHtml(line)}</p>`).join("");
-      const sep = idx < song.verses.length - 1 ? `<div class="verse-separator">✦</div>` : "";
+      const sep = idx < song.verses.length - 1 ? `<div class="verse-separator"></div>` : "";
       return `<section class="verse">${body}</section>${sep}`;
     }).join("");
 
-    lyrics.style.opacity = "0";
-    lyrics.style.transform = `translateX(${direction > 0 ? "16px" : direction < 0 ? "-16px" : "0"})`;
-    requestAnimationFrame(() => {
-      lyrics.style.transition = "opacity .25s ease, transform .25s ease";
-      lyrics.style.opacity = "1";
-      lyrics.style.transform = "translateX(0)";
-    });
+    // Previous / next labels
+    const prevSong = SONGS[state.currentIndex - 1];
+    const nextSong = SONGS[state.currentIndex + 1];
 
-    prevBtn.disabled = state.currentIndex === 0;
-    prevBtn.style.opacity = prevBtn.disabled ? ".4" : "1";
+    prevSongLabel.textContent = prevSong ? getSongTitle(prevSong) : "First song";
+    nextSongLabel.textContent = nextSong ? getSongTitle(nextSong) : "Finish";
+
+    prevBtn.disabled = !prevSong;
+    prevBtn.style.opacity = prevSong ? "1" : ".45";
+
+    if (direction !== 0) {
+      lyrics.animate(
+        [
+          { opacity: 0, transform: `translateX(${direction > 0 ? "12px" : "-12px"})` },
+          { opacity: 1, transform: "translateX(0)" }
+        ],
+        { duration: 220, easing: "ease-out" }
+      );
+    }
 
     renderSongList();
-    renderSongChips();
     updateScriptChoices();
     applyFontScale();
+    applySpacing();
   }
 
   function renderSongList() {
@@ -110,24 +108,10 @@
     `).join("");
 
     $$(".song-item").forEach(btn => {
-      btn.addEventListener("click", () => selectSong(Number(btn.dataset.songIndex)));
-    });
-  }
-
-  function renderSongChips() {
-    songChips.innerHTML = SONGS.map((song, i) => `
-      <button class="song-chip ${i === state.currentIndex ? "active" : ""}" data-chip-index="${i}">
-        ${i + 1}. ${escapeHtml(getSongTitle(song))}
-      </button>
-    `).join("");
-
-    $$(".song-chip").forEach(btn => {
-      btn.addEventListener("click", () => selectSong(Number(btn.dataset.chipIndex)));
-    });
-
-    requestAnimationFrame(() => {
-      const active = songChips.querySelector(".song-chip.active");
-      if (active) active.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      btn.addEventListener("click", () => {
+        const index = Number(btn.dataset.songIndex);
+        selectSong(index);
+      });
     });
   }
 
@@ -138,7 +122,6 @@
     renderSong(direction);
     closeSheets();
     showView("reader");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function nextSong() {
@@ -161,50 +144,20 @@
   }
 
   function applyFontScale() {
-    state.fontScale = Math.min(1.55, Math.max(.78, state.fontScale));
+    state.fontScale = Math.max(.82, Math.min(1.48, state.fontScale));
     document.documentElement.style.setProperty("--lyrics-scale", state.fontScale.toFixed(2));
   }
 
-  function changeFont(delta) {
-    state.fontScale += delta;
-    applyFontScale();
-  }
-
-  function resetFont() {
-    state.fontScale = 1;
-    applyFontScale();
-  }
-
-
   const spacingModes = {
-    compact: {
-      lineHeight: 1.55,
-      verseGap: 16,
-      versePaddingY: 12,
-      label: "Compact"
-    },
-    comfortable: {
-      lineHeight: 1.86,
-      verseGap: 24,
-      versePaddingY: 18,
-      label: "Comfort"
-    },
-    spacious: {
-      lineHeight: 2.18,
-      verseGap: 34,
-      versePaddingY: 22,
-      label: "Spacious"
-    }
+    compact: { line: 1.45, gap: 1.55 },
+    comfortable: { line: 1.72, gap: 2.25 },
+    spacious: { line: 2.05, gap: 3.05 }
   };
 
   function applySpacing() {
     const mode = spacingModes[state.spacing] || spacingModes.comfortable;
-
-    document.documentElement.style.setProperty("--lyrics-line-height", mode.lineHeight);
-    document.documentElement.style.setProperty("--verse-gap", `${mode.verseGap}px`);
-    document.documentElement.style.setProperty("--verse-padding-y", `${mode.versePaddingY}px`);
-
-    if (spacingQuickText) spacingQuickText.textContent = mode.label;
+    document.documentElement.style.setProperty("--line-height", mode.line);
+    document.documentElement.style.setProperty("--verse-gap", `${mode.gap}rem`);
 
     $$(".spacing-option").forEach(btn => {
       btn.classList.toggle("selected", btn.dataset.spacing === state.spacing);
@@ -215,13 +168,6 @@
     if (!spacingModes[mode]) return;
     state.spacing = mode;
     applySpacing();
-  }
-
-  function cycleSpacing() {
-    const order = ["compact", "comfortable", "spacious"];
-    const current = order.indexOf(state.spacing);
-    const next = order[(current + 1) % order.length];
-    setSpacing(next);
   }
 
   function openSheet(id) {
@@ -278,45 +224,19 @@
     $("#wakeBtn").setAttribute("aria-checked", state.wakeLock ? "true" : "false");
   }
 
-  function validateSongs() {
-    SONGS.forEach((song, songIndex) => {
-      if (!song.title?.devanagari || !song.title?.roman) {
-        console.warn(`Song ${songIndex + 1}: missing a title in one script.`);
-      }
-      (song.verses || []).forEach((verse, verseIndex) => {
-        const d = verse.devanagari || [];
-        const r = verse.roman || [];
-        if (d.length !== r.length) {
-          console.warn(`Song "${song.id}", verse ${verseIndex + 1}: line count mismatch (${d.length} / ${r.length}).`);
-        }
-      });
-    });
-  }
-
-  // Welcome: always starts fresh after refresh.
+  // Welcome
   $$(".language-card").forEach(btn => {
     btn.addEventListener("click", () => {
       state.script = btn.dataset.language;
       state.currentIndex = 0;
       state.fontScale = 1;
       state.spacing = "comfortable";
-      applySpacing();
       renderSong();
       showView("reader");
     });
   });
 
-  // Main reader controls
-  nextBtn.addEventListener("click", nextSong);
-  prevBtn.addEventListener("click", prevSong);
-
-  $("#songsBtn").addEventListener("click", () => openSheet("songDrawer"));
-  counterBtn.addEventListener("click", () => openSheet("songDrawer"));
-  $("#chooseSongBtn").addEventListener("click", () => openSheet("songDrawer"));
-
-  $("#scriptBtn").addEventListener("click", () => openSheet("scriptSheet"));
-  $("#settingsBtn").addEventListener("click", () => openSheet("settingsSheet"));
-
+  // Reader
   $("#homeBtn").addEventListener("click", () => {
     state.currentIndex = 0;
     state.fontScale = 1;
@@ -326,49 +246,39 @@
     showView("welcome");
   });
 
-  $("#restartBtn").addEventListener("click", () => {
-    state.currentIndex = 0;
-    state.fontScale = 1;
-    state.spacing = "comfortable";
-    applySpacing();
-    renderSong();
-    showView("reader");
-  });
+  $("#songPickerBtn").addEventListener("click", () => openSheet("songDrawer"));
+  $("#scriptBtn").addEventListener("click", () => openSheet("scriptSheet"));
+  $("#songsBtn").addEventListener("click", () => openSheet("songDrawer"));
+  $("#formatBtn").addEventListener("click", () => openSheet("settingsSheet"));
 
-  $("#inviteBtn").addEventListener("click", () => {
-    state.currentIndex = 0;
-    state.fontScale = 1;
-    state.spacing = "comfortable";
-    applyFontScale();
-    applySpacing();
-    showView("welcome");
-  });
+  prevBtn.addEventListener("click", prevSong);
+  nextBtn.addEventListener("click", nextSong);
 
-  backdrop.addEventListener("click", closeSheets);
-  $$("[data-close-sheet]").forEach(btn => btn.addEventListener("click", closeSheets));
-
+  // Script
   $$("[data-script-choice]").forEach(btn => {
     btn.addEventListener("click", () => setScript(btn.dataset.scriptChoice));
   });
 
-  // Font controls: both always-visible quick controls and settings sheet.
-  $("#fontQuickDown").addEventListener("click", () => changeFont(-.10));
-  $("#fontQuickReset").addEventListener("click", resetFont);
-  $("#fontQuickUp").addEventListener("click", () => changeFont(.10));
-
-  $("#fontDown").addEventListener("click", () => changeFont(-.10));
-  $("#fontReset").addEventListener("click", resetFont);
-  $("#fontUp").addEventListener("click", () => changeFont(.10));
-
-  $("#spacingQuickBtn").addEventListener("click", cycleSpacing);
+  // Reading settings
+  $("#fontDown").addEventListener("click", () => {
+    state.fontScale -= .1;
+    applyFontScale();
+  });
+  $("#fontReset").addEventListener("click", () => {
+    state.fontScale = 1;
+    applyFontScale();
+  });
+  $("#fontUp").addEventListener("click", () => {
+    state.fontScale += .1;
+    applyFontScale();
+  });
 
   $$(".spacing-option").forEach(btn => {
     btn.addEventListener("click", () => setSpacing(btn.dataset.spacing));
   });
 
   $("#wakeBtn").addEventListener("click", () => {
-    if (state.wakeLock) releaseWakeLock();
-    else requestWakeLock();
+    state.wakeLock ? releaseWakeLock() : requestWakeLock();
   });
 
   document.addEventListener("visibilitychange", async () => {
@@ -377,13 +287,33 @@
     }
   });
 
-  // Swipe left/right between songs
+  // Drawers
+  backdrop.addEventListener("click", closeSheets);
+  $$("[data-close-sheet]").forEach(btn => btn.addEventListener("click", closeSheets));
+
+  // Closing
+  $("#restartBtn").addEventListener("click", () => {
+    state.currentIndex = 0;
+    state.fontScale = 1;
+    state.spacing = "comfortable";
+    renderSong();
+    showView("reader");
+  });
+
+  $("#inviteBtn").addEventListener("click", () => {
+    state.currentIndex = 0;
+    state.fontScale = 1;
+    state.spacing = "comfortable";
+    showView("welcome");
+  });
+
+  // Swipe navigation (reader only, horizontal gesture)
   let touchStartX = null;
   let touchStartY = null;
 
   document.addEventListener("touchstart", (e) => {
     if (!views.reader.classList.contains("view-active")) return;
-    if (e.target.closest(".sheet,.bottom-dock,.song-chips,.quick-tools")) return;
+    if (e.target.closest(".sheet,.reader-header,.end-controls")) return;
     touchStartX = e.changedTouches[0].clientX;
     touchStartY = e.changedTouches[0].clientY;
   }, { passive:true });
@@ -392,21 +322,24 @@
     if (touchStartX === null) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
-    if (Math.abs(dx) > 65 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.35) {
       dx < 0 ? nextSong() : prevSong();
     }
+
     touchStartX = touchStartY = null;
   }, { passive:true });
 
-  validateSongs();
+  // Initial state: ALWAYS reset on refresh.
+  state.script = "devanagari";
+  state.currentIndex = 0;
+  state.fontScale = 1;
+  state.spacing = "comfortable";
+
   applyFontScale();
   applySpacing();
   renderSongList();
-  renderSongChips();
   updateScriptChoices();
-
-  // CRITICAL: never restore the previous reader state on refresh.
-  // Every load starts at the welcome screen.
   showView("welcome");
 
   if ("serviceWorker" in navigator) {

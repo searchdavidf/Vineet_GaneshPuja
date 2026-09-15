@@ -417,7 +417,7 @@ const SONGS = [
   // ========================================================
   // 5. SHREE GANESH PANCHARATNAM
   // ========================================================
- {
+{
   "id": "ganesha-pancharatnam",
   "type": "Ganesh Stotra",
   "title": {
@@ -496,12 +496,12 @@ const SONGS = [
       ]
     }
   ]
-}
+},
 
   // ========================================================
-  // 6. Ganesh Gauri Putra
+  // 6. Hey Ganesh Gauri Putra
   // ========================================================
-      {
+  {
   "id": "shri-ganesh-stuti",
   "type": "Ganesh Stuti",
   "title": {
@@ -577,7 +577,5 @@ const SONGS = [
     }
   ]
 }
-    ]
-  }
 
 ];

@@ -152,3 +152,17 @@ This helps visitors receive the latest version after deployment.
 - Quick spacing control is visible beside the font-size controls.
 - Full spacing selector is also available in Reading Settings.
 - Spacing resets to Comfortable on every page refresh.
+
+
+## V5 redesign
+
+- Removed the fixed bottom navigation bar.
+- Removed always-visible font and spacing controls.
+- Removed horizontal song chips.
+- Removed verse cards for a continuous reading flow.
+- The reader now has only a slim sticky top header.
+- Song picker opens from the song title in the header.
+- Language switch remains accessible in the header.
+- Previous / next navigation and reading controls are placed after the lyrics, so they only appear when the user reaches the bottom of the song.
+- Reading settings still support font size, line spacing and screen wake lock.
+- Refresh always resets to the welcome page.
