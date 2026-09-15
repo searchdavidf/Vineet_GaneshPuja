@@ -499,56 +499,8 @@ const SONGS = [
 }
 
   // ========================================================
-  // 6. GAURA TERA LAAL
+  // 6. Ganesh Gauri Putra
   // ========================================================
-  {
-    id: "gaura-tera-laal",
-    type: "Ganesh Bhajan",
-    title: {
-      devanagari: "गौरा तेरा लाल",
-      roman: "Gaura Tera Laal"
-    },
-    verses: [
-      {
-        devanagari: [
-          "गौरा तेरा लाल देवों में सबसे प्यारा है।",
-          "रिद्धि-सिद्धि का दाता, विघ्नों का हरने वाला है॥"
-        ],
-        roman: [
-          "Gaura tera laal devo mein sabse pyara hai,",
-          "Riddhi-Siddhi ka data, vighno ka harne wala hai."
-        ]
-      },
-      {
-        devanagari: [
-          "माथे चन्दन सोहे, कान बड़े-बड़े प्यारे हैं।",
-          "मोदक का भोग लगे, मूषक असवारी है॥"
-        ],
-        roman: [
-          "Mathe chandan sohe, kaan bade-bade pyare hain,",
-          "Modak ka bhog lage, mooshak aswari hai."
-        ]
-      },
-      {
-        devanagari: [
-          "प्रथम पूज्य गजानन, महिमा तेरी भारी है।",
-          "चरणों में शीश नवाएँ, दुनिया यह सारी है॥"
-        ],
-        roman: [
-          "Pratham poojya Gajanan, mahima teri bhari hai,",
-          "Charnon mein sheesh nawayein, duniya yeh sari hai."
-        ]
-      },
-      {
-        devanagari: [
-          "घर में पधारो देवा, मंगल बरसा जाओ।",
-          "दास खड़े द्वार तेरे, दुःखों को मिटा जाओ॥"
-        ],
-        roman: [
-          "Ghar mein padharo Deva, mangal barsa jaao,",
-          "Daas khade dwar tere, dukhon ko mita jaao."
-        ]
-      }
       {
   "id": "shri-ganesh-stuti",
   "type": "Ganesh Stuti",
