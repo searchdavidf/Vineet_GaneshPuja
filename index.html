@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#5a1518" />
+  <meta name="description" content="Ganesh Chaturthi Aarti & Bhajan lyrics in Devanagari and English script." />
+  <title>Ganesh Chaturthi Songs</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main id="app">
+    <!-- WELCOME -->
+    <section id="welcomeView" class="view view-active welcome-view" aria-labelledby="welcomeTitle">
+      <div class="welcome-shell">
+        <div class="poster-wrap reveal">
+          <img
+            class="invite-poster"
+            src="assets/invitation.jpeg"
+            alt="Ganesh Chaturthi invitation"
+            loading="eager"
+          />
+          <div class="poster-glow"></div>
+        </div>
+
+        <div class="welcome-panel reveal reveal-delay">
+          <p class="eyebrow">Ganesh Chaturthi 2026</p>
+          <h1 id="welcomeTitle">Welcome to our celebration</h1>
+          <p class="welcome-copy">
+            Follow the aarti and bhajans together. Choose the script you are most comfortable reading.
+          </p>
+
+          <div class="language-grid" role="group" aria-label="Choose lyrics script">
+            <button class="language-card" data-language="devanagari">
+              <span class="language-symbol">अ</span>
+              <span>
+                <strong>हिन्दी</strong>
+                <small>देवनागरी</small>
+              </span>
+            </button>
+
+            <button class="language-card" data-language="roman">
+              <span class="language-symbol">A</span>
+              <span>
+                <strong>English</strong>
+                <small>Roman script</small>
+              </span>
+            </button>
+          </div>
+
+          <p class="welcome-blessing">गणपति बप्पा मोरया • मंगल मूर्ति मोरया</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- READER -->
+    <section id="readerView" class="view reader-view" aria-live="polite">
+      <header class="topbar">
+        <button id="homeBtn" class="icon-btn" aria-label="Back to welcome">⌂</button>
+
+        <div class="topbar-center">
+          <span id="songType" class="eyebrow"></span>
+          <span id="progressText" class="progress-text"></span>
+        </div>
+
+        <button id="scriptBtn" class="icon-btn script-btn" aria-label="Change script">अ/A</button>
+      </header>
+
+      <div class="reader-shell">
+        <div class="song-heading">
+          <h2 id="songTitle"></h2>
+          <div class="ornament"><span></span>✦<span></span></div>
+        </div>
+
+        <article id="lyrics" class="lyrics" tabindex="0"></article>
+      </div>
+
+      <nav class="bottom-dock" aria-label="Song navigation">
+        <button id="songsBtn" class="dock-btn" aria-label="Open song list">☰</button>
+        <button id="prevBtn" class="dock-btn" aria-label="Previous song">‹</button>
+        <button id="counterBtn" class="counter-btn" aria-label="Current song position">1 / 1</button>
+        <button id="nextBtn" class="dock-btn" aria-label="Next song">›</button>
+        <button id="settingsBtn" class="dock-btn" aria-label="Reading settings">Aa</button>
+      </nav>
+    </section>
+
+    <!-- CLOSING -->
+    <section id="closingView" class="view closing-view">
+      <div class="closing-card reveal">
+        <div class="closing-icon">🪷</div>
+        <p class="eyebrow">With gratitude</p>
+        <h2>गणपति बप्पा मोरया</h2>
+        <p class="closing-subtitle">मंगल मूर्ति मोरया</p>
+        <p>
+          Thank you for joining our Ganesh Chaturthi celebration.
+          May Bappa bless your home with happiness, wisdom and prosperity.
+        </p>
+        <div class="closing-actions">
+          <button id="restartBtn" class="primary-btn">View Songs Again</button>
+          <button id="inviteBtn" class="secondary-btn">View Invitation</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SONG DRAWER -->
+  <div id="drawerBackdrop" class="backdrop" hidden></div>
+  <aside id="songDrawer" class="sheet" aria-hidden="true" aria-label="All songs">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header">
+      <div>
+        <p class="eyebrow">Ceremony order</p>
+        <h3>All songs</h3>
+      </div>
+      <button class="icon-btn" data-close-sheet="songDrawer" aria-label="Close">×</button>
+    </div>
+    <div id="songList" class="song-list"></div>
+  </aside>
+
+  <!-- SCRIPT SHEET -->
+  <aside id="scriptSheet" class="sheet compact-sheet" aria-hidden="true" aria-label="Lyrics script">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header">
+      <div>
+        <p class="eyebrow">Reading</p>
+        <h3>Lyrics script</h3>
+      </div>
+      <button class="icon-btn" data-close-sheet="scriptSheet" aria-label="Close">×</button>
+    </div>
+
+    <div class="choice-list">
+      <button class="choice-btn" data-script-choice="devanagari">
+        <span>हिन्दी</span><small>Devanagari</small><b class="check">✓</b>
+      </button>
+      <button class="choice-btn" data-script-choice="roman">
+        <span>English</span><small>Roman script</small><b class="check">✓</b>
+      </button>
+    </div>
+  </aside>
+
+  <!-- SETTINGS SHEET -->
+  <aside id="settingsSheet" class="sheet compact-sheet" aria-hidden="true" aria-label="Reading settings">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header">
+      <div>
+        <p class="eyebrow">Comfort</p>
+        <h3>Reading settings</h3>
+      </div>
+      <button class="icon-btn" data-close-sheet="settingsSheet" aria-label="Close">×</button>
+    </div>
+
+    <div class="settings-block">
+      <span>Text size</span>
+      <div class="font-controls">
+        <button id="fontDown" class="secondary-btn" aria-label="Decrease text size">A−</button>
+        <button id="fontReset" class="secondary-btn" aria-label="Reset text size">A</button>
+        <button id="fontUp" class="secondary-btn" aria-label="Increase text size">A+</button>
+      </div>
+    </div>
+
+    <div class="settings-block row">
+      <div>
+        <span>Keep screen awake</span>
+        <small>Useful during aarti</small>
+      </div>
+      <button id="wakeBtn" class="toggle-btn" role="switch" aria-checked="false">
+        <span></span>
+      </button>
+    </div>
+  </aside>
+
+  <script src="songs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
