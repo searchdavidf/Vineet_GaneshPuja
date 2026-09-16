@@ -1,9 +1,0 @@
-{
-  "name": "Ganesh Chaturthi Songs",
-  "short_name": "Ganesh Songs",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#fff8ea",
-  "theme_color": "#5a1518",
-  "description": "Ganesh Chaturthi aarti and bhajan lyrics in Devanagari and Roman script."
-}
