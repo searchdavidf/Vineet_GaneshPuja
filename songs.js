@@ -2,138 +2,91 @@
   ==========================================================
   GANESH CHATURTHI SONG DATABASE
   ==========================================================
-
-  HOW TO ADD A NEW SONG
-
-  1. Copy one complete song object.
-  2. Give it a unique `id`.
-  3. Set the visible category in `type`.
-  4. Add the title in BOTH scripts.
-  5. Split the song into logical verses.
-  6. Inside every verse, keep Devanagari and Roman lines paired
-     in the SAME order.
-
-  IMPORTANT:
-  - Every Devanagari line should have one corresponding Roman line.
-  - Do not use <br> tags.
-  - Put each lyric line inside quotes, separated by commas.
-  - Put a comma after each verse object except the final one.
-  - Put a comma after each song object except the final one.
-
-  TEMPLATE:
-
-  {
-    id: "unique-song-id",
-    type: "Ganesh Aarti",
-    title: {
-      devanagari: "गीत का नाम",
-      roman: "Song Name"
-    },
-    verses: [
-      {
-        devanagari: [
-          "पहली पंक्ति",
-          "दूसरी पंक्ति"
-        ],
-        roman: [
-          "Pehli Pankti",
-          "Doosri Pankti"
-        ]
-      }
-    ]
-  }
 */
 
 const SONGS = [
-
   // ========================================================
-  // 1. JAI GANESH DEVA AARTI
+  // 1. Ganesh Aarti
   // ========================================================
   {
-    id: "jai-ganesh-deva",
-    type: "Ganesh Aarti",
-    title: {
-      devanagari: "जय गणेश देवा आरती",
-      roman: "Jai Ganesh Deva Aarti"
+    "id": "aarti",
+    "type": "Ganesh Aarti",
+    "title": {
+      "devanagari": "जय गणेश जय गणेश जय गणेश देवा",
+      "roman": "Jai Ganesh Jai Ganesh Jai Ganesh Deva"
     },
-    verses: [
+    "verses": [
       {
-        devanagari: [
-          "जय गणेश, जय गणेश, जय गणेश देवा।",
-          "माता जाकी पार्वती, पिता महादेवा॥"
+        "devanagari": [
+          "जय गणेश जय गणेश, जय गणेश देवा।",
+          "माता जाकी पार्वती, पिता महादेवा॥",
+          "एक दंत दयावंत, चार भुजा धारी।",
+          "माथे सिंदूर सोहे, मूसे की सवारी॥"
         ],
-        roman: [
-          "Jai Ganesh, Jai Ganesh, Jai Ganesh Deva,",
-          "Mata Jaki Parvati, Pita Mahadeva."
-        ]
-      },
-      {
-        devanagari: [
-          "जय गणेश, जय गणेश, जय गणेश देवा।",
-          "माता जाकी पार्वती, पिता महादेवा॥"
-        ],
-        roman: [
-          "Jai Ganesh, Jai Ganesh, Jai Ganesh Deva,",
-          "Mata Jaki Parvati, Pita Mahadeva."
-        ]
-      },
-      {
-        devanagari: [
-          "एक दन्त दयावन्त, चार भुजाधारी।",
-          "माथे सिन्दूर सोहे, मूसे की सवारी॥"
-        ],
-        roman: [
-          "Ek Danta Dayavanta, Char Bhujadhari,",
+        "roman": [
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
+          "Mata Jaki Parvati, Pita Mahadeva.",
+          "Ek Dant Dayavant, Char Bhuja Dhari.",
           "Mathe Sindoor Sohe, Moose Ki Sawari."
         ]
       },
       {
-        devanagari: [
-          "पान चढ़े, फूल चढ़े और चढ़े मेवा।",
-          "लड्डुअन का भोग लगे, सन्त करें सेवा॥"
+        "devanagari": [
+          "जय गणेश जय गणेश, जय गणेश देवा।",
+          "माता जाकी पार्वती, पिता महादेवा॥",
+          "पान चढ़े फल चढ़े, और चढ़े मेवा।",
+          "लड्डुअन का भोग लगे, संत करें सेवा॥"
         ],
-        roman: [
-          "Paan Chaddhe, Phool Chaddhe Aur Chaddhe Mewa,",
-          "Ladduan Ka Bhog Lage, Sant Karein Sewa."
+        "roman": [
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
+          "Mata Jaki Parvati, Pita Mahadeva.",
+          "Paan Chadhe Phal Chadhe, Aur Chadhe Mewa.",
+          "Ladduan Ka Bhog Lage, Sant Karen Sewa."
         ]
       },
       {
-        devanagari: [
-          "जय गणेश, जय गणेश, जय गणेश देवा।",
-          "माता जाकी पार्वती, पिता महादेवा॥"
-        ],
-        roman: [
-          "Jai Ganesh, Jai Ganesh, Jai Ganesh Deva,",
-          "Mata Jaki Parvati, Pita Mahadeva."
-        ]
-      },
-      {
-        devanagari: [
-          "अंधेन को आँख देत, कोढिन को काया।",
+        "devanagari": [
+          "जय गणेश जय गणेश, जय गणेश देवा।",
+          "माता जाकी पार्वती, पिता महादेवा॥",
+          "अंधन को आंख देत, कोढिन को काया।",
           "बांझन को पुत्र देत, निर्धन को माया॥"
         ],
-        roman: [
-          "Andhen Ko Aankh Det, Kodhin Ko Kaya,",
-          "Banjhan Ko Putra Det, Nirdhan Ko Maya."
+        "roman": [
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
+          "Mata Jaki Parvati, Pita Mahadeva.",
+          "Andhan Ko Aankh Det, Kodhin Ko Kaya.",
+          "Banjhan Ko Putr Det, Nirdhan Ko Maya."
         ]
       },
       {
-        devanagari: [
+        "devanagari": [
+          "जय गणेश जय गणेश, जय गणेश देवा।",
+          "माता जाकी पार्वती, पिता महादेवा॥",
           "'सूर' श्याम शरण आए, सफल कीजे सेवा।",
           "माता जाकी पार्वती, पिता महादेवा॥"
         ],
-        roman: [
-          "'Soor' Shyam Sharan Aaye, Saphal Keeje Sewa,",
+        "roman": [
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
+          "Mata Jaki Parvati, Pita Mahadeva.",
+          "'Soor' Shyam Sharan Aaye, Saphal Keeje Sewa.",
           "Mata Jaki Parvati, Pita Mahadeva."
         ]
       },
       {
-        devanagari: [
-          "जय गणेश, जय गणेश, जय गणेश देवा।",
+        "devanagari": [
+          "जय गणेश जय गणेश, जय गणेश देवा।",
+          "माता जाकी पार्वती, पिता महादेवा॥",
+          "दीनन की लाज रखो, शंभु सुतकारी।",
+          "कामना को पूर्ण करो, जाऊं बलिहारी॥",
+          "जय गणेश जय गणेश, जय गणेश देवा।",
           "माता जाकी पार्वती, पिता महादेवा॥"
         ],
-        roman: [
-          "Jai Ganesh, Jai Ganesh, Jai Ganesh Deva,",
+        "roman": [
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
+          "Mata Jaki Parvati, Pita Mahadeva.",
+          "Deenan Ki Laaj Rakho, Shambhu Sutkari.",
+          "Kaamna Ko Poorn Karo, Jaoon Balihari.",
+          "Jai Ganesh Jai Ganesh, Jai Ganesh Deva.",
           "Mata Jaki Parvati, Pita Mahadeva."
         ]
       }
@@ -141,441 +94,687 @@ const SONGS = [
   },
 
   // ========================================================
-  // 2. SUKHKARTA DUKHHARTA AARTI
+  // 2. Sukhkarta Dukhharta
   // ========================================================
   {
-    id: "sukhkarta-dukhharta",
-    type: "Ganesh Aarti",
-    title: {
-      devanagari: "सुखकर्ता दुखहर्ता आरती",
-      roman: "Sukhkarta Dukhharta Aarti"
+    "id": "sukh-karta-dukh-harta",
+    "type": "Ganesh Aarti",
+    "title": {
+      "devanagari": "सुख करता दुखहर्ता",
+      "roman": "Sukh Karta Dukh Harta"
     },
-    verses: [
+    "verses": [
       {
-        devanagari: [
-          "सुखकर्ता दुखहर्ता वार्ता विघ्नाची।",
-          "नुरवी पुरवी प्रेम कृपा जयाची।",
-          "सर्वांगी सुंदर उटी शेंदुराची।",
-          "कंठी झळके माळ मुक्ताफळांची॥"
+        "devanagari": [
+          "सुख करता दुखहर्ता, वार्ता विघ्नाची",
+          "नूर्वी पूर्वी प्रेम कृपा जयाची",
+          "सर्वांगी सुन्दर उटी शेंदु राची",
+          "कठी झलके माल मुकताफळाबी",
+          "जय देव जय देव, जय माल मूर्ति",
+          "दर्शनमात्रे मनःकमाना पूर्ति",
+          "जय देव जय देव"
         ],
-        roman: [
-          "Sukhkarta Dukhharta Varta Vighnachi,",
-          "Nurvi Purvi Prem Kripa Jayachi.",
-          "Sarvangi Sundar Uti Shendurachi,",
-          "Kanthi Zalke Mal Muktaphalanchi."
+        "roman": [
+          "Sukh Karta Dukhharta, Varta Vighnachi",
+          "Nurvi Purvi Prem Kripa Jayachi",
+          "Sarvangi Sundar Uti Shendu Rachi",
+          "Kathi Jhalke Maal Muktaphalabi",
+          "Jai Dev Jai Dev, Jai Maal Moorti",
+          "Darshanmatre Manahkamana Poorti",
+          "Jai Dev Jai Dev"
         ]
       },
       {
-        devanagari: [
-          "जय देव जय देव जय मंगलमूर्ती।",
-          "दर्शनमात्रे मनकामना पुर्ती॥ जय देव जय देव ॥"
+        "devanagari": [
+          "रत्नखचित फरा तुझ गौरीकुमरा",
+          "चादनाची उटी कुमकुम केशरा",
+          "हीरे जडित मुकुट शोभतो बरा",
+          "रुन्झुनती नूपुरे चरनी घागरिया",
+          "जय देव जय देव, जय माल मूर्ति",
+          "दर्शनमात्रे मनःकमाना पूर्ति",
+          "जय देव जय देव"
         ],
-        roman: [
-          "Jai Dev Jai Dev Jai Mangal Murti,",
-          "Darshanmatre Mankamna Purti, Jai Dev Jai Dev."
+        "roman": [
+          "Ratnakachit Phara Tujh Gaurikumara",
+          "Chandanachi Uti Kumkum Keshara",
+          "Heere Jadit Mukut Shobhato Bara",
+          "Runjhunti Nupure Charni Ghagariya",
+          "Jai Dev Jai Dev, Jai Maal Moorti",
+          "Darshanmatre Manahkamana Poorti",
+          "Jai Dev Jai Dev"
         ]
       },
       {
-        devanagari: [
-          "रत्नखचित फरा तुज गौरीकुमरा।",
-          "चंदनाची उटी कुंकुमकेशरा।",
-          "हीरेजडित मुकुट शोभतो बरा।",
-          "रुणझुणती नूपुरे चरणी घागरिया॥"
+        "devanagari": [
+          "लम्बोदर पीताम्बर फनिवर वाद्यना",
+          "सरल सोख वक्रतुण्डा त्रिनयना",
+          "दास रामाचा वाट पाहे सदना",
+          "साक्कटी पावावे निर्वाणी रक्षावे सुरवर वाद्यना",
+          "जय देव जय देव, जय माल मूर्ति",
+          "दर्शनमात्रे मनःकमाना पूर्ति",
+          "जय देव जय देव"
         ],
-        roman: [
-          "Ratnakhachit Phara Tuj Gaurikumara,",
-          "Chandanachi Uti Kunkumkeshara.",
-          "Hirejadit Mukut Shobhto Bara,",
-          "Runjhunti Nupure Charni Ghagariya."
-        ]
-      },
-      {
-        devanagari: [
-          "जय देव जय देव जय मंगलमूर्ती।",
-          "दर्शनमात्रे मनकामना पुर्ती॥ जय देव जय देव ॥"
-        ],
-        roman: [
-          "Jai Dev Jai Dev Jai Mangal Murti,",
-          "Darshanmatre Mankamna Purti, Jai Dev Jai Dev."
-        ]
-      },
-      {
-        devanagari: [
-          "लंबोदर पीतांबर फणिवरबंधना।",
-          "सरळ सोंड वक्रतुंड त्रिनयना।",
-          "दास रामाचा वाट पाहे सदना।",
-          "संकटी पावावे निर्वाणी रक्षावे सुरवरवंदना॥"
-        ],
-        roman: [
-          "Lambodar Peetambar Phanivarbandhana,",
-          "Saral Sond Vakratunda Trinayana.",
-          "Daas Ramacha Vat Pahe Sadana,",
-          "Sankati Pavave Nirvani Rakshave Suravarvandana."
-        ]
-      },
-      {
-        devanagari: [
-          "जय देव जय देव जय मंगलमूर्ती।",
-          "दर्शनमात्रे मनकामना पुर्ती॥ जय देव जय देव ॥"
-        ],
-        roman: [
-          "Jai Dev Jai Dev Jai Mangal Murti,",
-          "Darshanmatre Mankamna Purti, Jai Dev Jai Dev."
+        "roman": [
+          "Lambodar Peetambar Phanivar Vadyana",
+          "Saral Sokh Vakratunda Trinayana",
+          "Daas Ramacha Vaat Paahe Sadana",
+          "Sakkati Paavave Nirvani Rakshave Survar Vadyana",
+          "Jai Dev Jai Dev, Jai Maal Moorti",
+          "Darshanmatre Manahkamana Poorti",
+          "Jai Dev Jai Dev"
         ]
       }
     ]
   },
 
   // ========================================================
-  // 3. SHENDUR LAL CHADHAYO
+  // 3. Shendur Laal Chadhayo
   // ========================================================
   {
-    id: "shendur-lal-chadhayo",
-    type: "Ganesh Aarti",
-    title: {
-      devanagari: "शेंदूर लाल",
-      roman: "Shendur Lal Chadhayo"
+    "id": "shendur-laal-chadhayo",
+    "type": "Ganesh Aarti",
+    "title": {
+      "devanagari": "शेंदुर लाल चढ़ायो",
+      "roman": "Shendur Laal Chadhayo"
     },
-    verses: [
+    "verses": [
       {
-        devanagari: [
-          "शेंदूर लाल चढायो अच्छा गजमुख को",
-          "दोंदिल लाल बिराजे सूत गौरिहर को",
-          "हाथ लिए गुड लड्डू साई सुरवर को",
-          "महिमा कहे ना जाय लागत हूँ पद को"
-        ],
-        roman: [
-          "Shendur laal chadhayo achha gajamukha ko",
-          "Dondil laal biraje suta Gaurihara ko",
-          "Haath liye gud laddu sai suravara ko",
-          "Mahima kahe na jaay lagat hoon pada ko"
-        ]
-      },
-      {
-        devanagari: [
-          "जय देव जय देव",
-          "जय जय जी गणराज विद्यासुखदाता",
-          "धन्य तुम्हारा दर्शन मेरा मन रमता",
+        "devanagari": [
+          "शेंदुर लाल चढ़ायो अच्छा गजमुख को",
+          "दोन्दिल लाल बिराजे सूत गौरिहर को",
+          "हाथ लिए गुड लड्डू साईं सुरवर को",
+          "महिमा कहे ना जाय लागत हूँ पद को",
           "जय देव जय देव"
         ],
-        roman: [
-          "Jai Dev Jai Dev",
-          "Jai Jai Ji Ganraj Vidyasukhdata",
-          "Dhanya tumharo darshan mera man ramta",
+        "roman": [
+          "Shendur Laal Chadhayo Achha Gajmukh Ko",
+          "Dondil Laal Biraje Soot Gaurihar Ko",
+          "Haath Liye Gud Laddu Sain Survar Ko",
+          "Mahima Kahe Na Jaay Lagat Hoon Pad Ko",
           "Jai Dev Jai Dev"
         ]
       },
       {
-        devanagari: [
-          "अष्ट सिधि दासी संकट को बैरी",
+        "devanagari": [
+          "जय जय जी गणराज विद्यासुखदाता",
+          "धन्य तुम्हारा दर्शन मेरा मत रमता",
+          "जय देव जय देव"
+        ],
+        "roman": [
+          "Jai Jai Jee Ganraj Vidyasukhdata",
+          "Dhanya Tumhara Darshan Mera Mat Ramta",
+          "Jai Dev Jai Dev"
+        ]
+      },
+      {
+        "devanagari": [
+          "अष्ट सिधि दासी सकट को बैरी",
           "विघन विनाशन मंगल मूरत अधिकारी",
-          "कोटि सूरज प्रकाश ऐसे छबी तेरी",
-          "गंडस्थल मडमस्तक झूल शणि बहरी"
+          "कोटि सूरज प्रकाश ऐसे बी तेरी",
+          "गंडस्थल मडास्तक झूल शशिर बहरी"
         ],
-        roman: [
-          "Asht sidhi daasi sankat ko baeri",
-          "Vighan vinashan mangal murat adhikari",
-          "Koti suraj prakash aise chhabi teri",
-          "Gandasthala madamastaka jhool shashi bahari"
+        "roman": [
+          "Asht Sidhi Daasi Sakat Ko Bairi",
+          "Vighan Vinashan Mangal Moorat Adhikari",
+          "Koti Sooraj Prakash Aise Bee Teri",
+          "Gandsthal Madashtak Jhool Shashir Bahari"
         ]
       },
       {
-        devanagari: [
-          "जय देव जय देव",
+        "devanagari": [
           "जय जय जी गणराज विद्यासुखदाता",
-          "धन्य तुम्हारा दर्शन मेरा मन रमता",
+          "धन्य तुम्हारा दर्शन मेरा मत रमता",
           "जय देव जय देव"
         ],
-        roman: [
-          "Jai Dev Jai Dev",
-          "Jai Jai Ji Ganraj Vidyasukhdata",
-          "Dhanya tumharo darshan mera man ramta",
+        "roman": [
+          "Jai Jai Jee Ganraj Vidyasukhdata",
+          "Dhanya Tumhara Darshan Mera Mat Ramta",
           "Jai Dev Jai Dev"
         ]
       },
       {
-        devanagari: [
+        "devanagari": [
           "भावभगत से कोई शरणागत आवे",
-          "संतति संपत्ति सबही भरपूर पावे",
+          "सन्तति संपत्ति सबही भरपूर पावे",
           "ऐसे तुम महाराज मोको अति भावे",
-          "गोसावीनंदन निशदिन गुण गावे"
+          "गोसावीनन्दन निशिदिन गुण गावे",
+          "जय देव जय देव"
         ],
-        roman: [
-          "Bhavbhagat se koi sharnagat aave",
-          "Santati sampatti sabhi bharpoor paave",
-          "Aise tum maharaj moko ati bhaave",
-          "Gosavinandan nishdin gun gaave"
+        "roman": [
+          "Bhavbhagat Se Koi Sharnagat Aave",
+          "Santati Sampatti Sabhi Bharpoor Paave",
+          "Aise Tum Maharaj Moko Ati Bhaave",
+          "Gosaveenandan Nishidin Gun Gaave",
+          "Jai Dev Jai Dev"
         ]
       },
       {
-        devanagari: [
-          "जय देव जय देव",
-          "जय जय जी गणराज विद्यासुखदाता",
+        "devanagari": [
+          "जय जय श्री गणराज विद्या सुखदाता",
           "धन्य तुम्हारा दर्शन मेरा मन रमता",
           "जय देव जय देव"
         ],
-        roman: [
-          "Jai Dev Jai Dev",
-          "Jai Jai Ji Ganraj Vidyasukhdata",
-          "Dhanya tumharo darshan mera man ramta",
+        "roman": [
+          "Jai Jai Shree Ganraj Vidya Sukhdata",
+          "Dhanya Tumhara Darshan Mera Man Ramta",
           "Jai Dev Jai Dev"
+        ]
+      },
+      {
+        "devanagari": [
+          "घालीन लोटांगण वंदिन चरन",
+          "डोळ्यांनी पाहीन रूप तुझे",
+          "प्रेम आलिंगिन आनंदे पूजी",
+          "भावे ओवालिन म्हणे नामा"
+        ],
+        "roman": [
+          "Ghaalin Lotangan Vandin Charan",
+          "Dolyani Paahin Roop Tujhe",
+          "Prem Aalingin Aande Pooji",
+          "Bhave Owalin Mhane Nama"
+        ]
+      },
+      {
+        "devanagari": [
+          "त्वमेव माता च पिता त्वमेव",
+          "त्वमेव बन्धू च सखा त्वमेव",
+          "त्वमेव विद्या द्रविणं त्वमेव",
+          "त्वमेव सर्वं मम देव देव"
+        ],
+        "roman": [
+          "Tvameva Mata Cha Pita Tvameva",
+          "Tvameva Bandhu Cha Sakha Tvameva",
+          "Tvameva Vidya Dravinam Tvameva",
+          "Tvameva Sarvam Mama Dev Dev"
+        ]
+      },
+      {
+        "devanagari": [
+          "कायेन वाचा मनसेंद्रियैर्वा",
+          "बुद्ध्यात्मना वा प्रकृतेः स्वभावात",
+          "करोमि यद्यत् सकलं परस्मै",
+          "नारायणायेति समर्पयामि ॥"
+        ],
+        "roman": [
+          "Kayena Vacha Manasendriyairva",
+          "Buddhyatmana Va Prakriteh Swabhavat",
+          "Karomi Yadyat Sakalam Parasmai",
+          "Narayanayeti Samarpayami ||"
+        ]
+      },
+      {
+        "devanagari": [
+          "श्री कृष्ण गोविन्द हरे मुरारे",
+          "हे नाथ नारायण वासुदेव ।"
+        ],
+        "roman": [
+          "Shree Krishna Govind Hare Murare",
+          "Hey Nath Narayan Vasudev."
         ]
       }
     ]
   },
 
   // ========================================================
-  // 4. GHALEEN LOTANGAN AARTI
+  // 4. Mudakaratmodkam
   // ========================================================
   {
-    id: "ghaleen-lotangan",
-    type: "Prayer / Aarti",
-    title: {
-      devanagari: "घालीन लोटांगण आरती",
-      roman: "Ghaleen Lotangan Aarti"
+    "id": "mudakaratmodkam",
+    "type": "Ganesh Stotram",
+    "title": {
+      "devanagari": "मुदाकरात्तमोदकं (गणेश पञ्चरत्नम्)",
+      "roman": "Mudakaratmodkam (Ganesha Pancharatnam)"
     },
-    verses: [
+    "verses": [
       {
-        devanagari: [
-          "घालीन लोटांगण वंदीन चरण।",
-          "डोळ्यांनी पाहिन रूप तुझे॥",
-          "प्रेमें आलिंगीन आनंद पूजन।",
-          "भावे ओवाळिन म्हणे नामा॥"
+        "devanagari": [
+          "मुदाकरात्तमोदकं सदा विमुक्तिसाधकं",
+          "कलाधरावतंसकं विलासिलोकरक्षकम्।",
+          "अनायकैकनायकं विनाशितेभदैत्यकं",
+          "नताशुभाशुनाशकं नमामि तं विनायकम् ॥१॥"
         ],
-        roman: [
-          "Ghaleen lotangan vandin charan,",
-          "Dolyani pahin roop tujhe.",
-          "Premen aalingin aanand poojan,",
-          "Bhave ovalin mhane Nama."
+        "roman": [
+          "Mudaakaraatta-Modakam Sadaa Vimukti-Saadhakam",
+          "Kalaadhara-Avatamsakam Vilaasi-Loka-Rakshakam |",
+          "Anaayakaika-Naayakam Vinaashita-Ebha-Daityakam",
+          "Nata-Ashubha-Ashu-Naashakam Namaami Tam Vinaayakam ||1||"
         ]
       },
       {
-        devanagari: [
-          "त्वमेव माता पिता त्वमेव।",
-          "त्वमेव बंधुः सखा त्वमेव॥",
-          "त्वमेव विद्या द्रविणं त्वमेव।",
-          "त्वमेव सर्व मम देवदेव॥"
+        "devanagari": [
+          "नतेतरातिभीकरं नवोदितार्कभास्वरं",
+          "नमत्सुरारिनिर्झरं नताधिकापदुद्धरम्।",
+          "सुरेश्वरं निधीश्वरं गजेश्वरं गणेश्वरं",
+          "महेश्वरं तमाश्रये परात्परं निरन्तरम् ॥२॥"
         ],
-        roman: [
-          "Tvameva mata pita tvameva,",
-          "Tvameva bandhuh sakha tvameva.",
-          "Tvameva vidya dravinam tvameva,",
-          "Tvameva sarvam mama devadeva."
+        "roman": [
+          "Natetara-Ati-Bheekaram Navodita-Arka-Bhaaswaram",
+          "Namatsuraari-Nirjharam Nata-Adhikaapad-Uddharam |",
+          "Sureshwaram Nidheshwaram Gajeshwaram Ganeshwaram",
+          "Maheshwaram Tamaashraye Paraatparam Nirantaram ||2||"
         ]
       },
       {
-        devanagari: [
-          "कायेन वाचा मनसेंद्रियैर्वा।",
-          "बुद्ध्यात्मना वा प्रकृतेः स्वभावात्॥",
-          "करोमि यद्यत् सकलं परस्मै।",
-          "नारायणायेति समर्पयामि॥"
+        "devanagari": [
+          "समस्तलोकशंकरं निरस्तदैत्यकुञ्जरं",
+          "दरेतरोदरं वरं वरेभवक्त्रमक्षरम्।",
+          "कृपाकरं क्षमाकरं मुदाकरं यशस्करं",
+          "मनस्करं नमस्कृतां नमस्करोमि भास्वरम् ॥३॥"
         ],
-        roman: [
-          "Kayena vaca manasendriyairva,",
-          "Buddhyatmana va prakriteh svabhavat.",
-          "Karomi yadyat sakalam parasmai,",
-          "Narayanayeti samarpayami."
+        "roman": [
+          "Samasta-Loka-Shankaram Nirasta-Daitya-Kunjaram",
+          "Daretarodaram Varam Varebhavaktramaksharam |",
+          "Kripaakaram Kshamaakaram Mudaakaram Yashaskaram",
+          "Manaskaram Namaskritaam Namaskaromi Bhaaswaram ||3||"
         ]
       },
       {
-        devanagari: [
-          "अच्युतं केशवं राम नारायणम्।",
-          "कृष्णदामोदरं वासुदेवं भजे॥",
-          "श्रीधरं माधवं गोपिकावल्लभम्।",
-          "जानकीनायकं रामचंद्र भजे॥"
+        "devanagari": [
+          "अकिंचनार्तिमार्जनं चिरन्तनोक्तिभाजनं",
+          "पुरारिपूर्वनन्दनं सुरारिगर्वचर्वणम्।",
+          "प्रपञ्चनाशभीषणं धनंजयादिभूषणम्",
+          "कपोलदानवारणम् भजे पुराणवारणम् ॥४॥"
         ],
-        roman: [
-          "Achyutam keshavam rama narayanam,",
-          "Krishnadamodaram vasudevam bhaje.",
-          "Sreedharam madhavam gopikavallabham,",
-          "Janakinayakam ramachandram bhaje."
+        "roman": [
+          "Akinchanarti-Marjanam Chirantanokti-Bhajanam",
+          "Puraari-Poorva-Nandanam Suraari-Garva-Charvanam |",
+          "Prapancha-Naasha-Bheeshanam Dhananjayaadi-Bhooshanam",
+          "Kapola-Daana-Vaaranam Bhaje Puraana-Vaaranam ||4||"
         ]
       },
       {
-        devanagari: [
-          "हरे राम हरे राम राम राम हरे हरे।",
-          "हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे॥"
+        "devanagari": [
+          "नितान्तकान्तदन्तकान्तिमन्तकान्तकात्मजं",
+          "अचिन्त्यरूपमन्तहीनमन्तरायकृन्तनम्।",
+          "हृदन्तरे निरन्तरं वसन्तमेव योगिनां",
+          "तमेकदन्तमेव तं विचिन्तयामि सन्ततम् ॥५॥"
         ],
-        roman: [
-          "Hare Rama Hare Rama Rama Rama Hare Hare,",
-          "Hare Krishna Hare Krishna Krishna Krishna Hare Hare."
+        "roman": [
+          "Nitaanta-Kaanta-Danta-Kaantimantakaantakaatmajam",
+          "Achintya-Roopam-Anta-Heenam-Antaraaya-Krintanam |",
+          "Hridantare Nirantaram Vasantameva Yoginaam",
+          "Tam-Ekadantam-Eva Tam Vichintayaami Santatam ||5||"
         ]
       },
       {
-        devanagari: [
-          "॥ मंगलमुर्ती मोरया ॥",
-          "॥ गणपती बाप्पा मोरया ॥"
+        "devanagari": [
+          "महागणेशपञ्चरत्नमादरेण योऽन्वहं",
+          "प्रजल्पति प्रभातके हृदि स्मरन् गणेश्वरम्।",
+          "अरोगतामदोषतां सुसाहितीं सुपुत्रतां",
+          "समाहितायुरष्टभूतिमभ्युपैति सोऽचिरात् ॥६॥"
         ],
-        roman: [
-          "|| Mangal Murti Morya ||",
-          "|| Ganapati Bappa Morya ||"
+        "roman": [
+          "Mahaa-Ganesha-Pancharatnam-Aadarena Yo'nvaham",
+          "Prajalpati Prabhaatake Hridi Smaran Ganeshwaram |",
+          "Arogataam Adoshataam Susaahiteem Suputrataam",
+          "Samaahitaayur-Ashtabhootim-Abhyupaiti So'chiraat ||6||"
         ]
       }
     ]
   },
 
   // ========================================================
-  // 5. SHREE GANESH PANCHARATNAM
+  // 5. Ek Dantay
+  // ========================================================
+  {
+    "id": "ek-dantay-vakratundaye",
+    "type": "Ganesh Stuti / Song",
+    "title": {
+      "devanagari": "एकदंताय वक्रतुण्डाय",
+      "roman": "Ek Dantay Vakratundaye"
+    },
+    "verses": [
+      {
+        "devanagari": [
+          "गणनायकाय गणदेवताय गणाध्यक्षाय धीमहि",
+          "गुणशरीराय गुणमण्डिताय गुणेशानाय धीमहि",
+          "गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि",
+          "एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि",
+          "गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि"
+        ],
+        "roman": [
+          "Gananayakaya Ganadevataya Ganadhyakshaya Dheemahi",
+          "Gunashareeraya Gunamanditaya Guneshanaya Dheemahi",
+          "Gunateetaya Gunadheeshaya Gunapravishtaya Dheemahi",
+          "Ekadantaya Vakratundaya Gauritanaya Dheemahi",
+          "Gajeshanaya Bhalachandraya ShreeGaneshaya Dheemahi"
+        ]
+      },
+      {
+        "devanagari": [
+          "गानसाराय गानतत्त्वाय गानगोत्राय धीमहि",
+          "गूढगुल्फाय गन्धमत्ताय गोजयप्रदाय धीमहि",
+          "गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि",
+          "एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि",
+          "गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि"
+        ],
+        "roman": [
+          "Gaansaraya Gaantattvaya Gaangotraya Dheemahi",
+          "Goodhagulphaya Gandhamattaya Gojayapradaya Dheemahi",
+          "Gunateetaya Gunadheeshaya Gunapravishtaya Dheemahi",
+          "Ekadantaya Vakratundaya Gauritanaya Dheemahi",
+          "Gajeshanaya Bhalachandraya ShreeGaneshaya Dheemahi"
+        ]
+      },
+      {
+        "devanagari": [
+          "गौरीप्रणयाय गौरीप्रवणाय गौरभावाय धीमहि",
+          "गोसहस्राय गोवर्धनाय गोपगोपाय धीमहि",
+          "गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि",
+          "एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि",
+          "गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि"
+        ],
+        "roman": [
+          "Gauripranayaya Gauripravanaya Gaurabhavaya Dheemahi",
+          "Gosahasraya Govardhanaya Gopagopaya Dheemahi",
+          "Gunateetaya Gunadheeshaya Gunapravishtaya Dheemahi",
+          "Ekadantaya Vakratundaya Gauritanaya Dheemahi",
+          "Gajeshanaya Bhalachandraya ShreeGaneshaya Dheemahi"
+        ]
+      }
+    ]
+  },
+
+  // ========================================================
+  // 6. Shri Ganesh Stuti
+  // ========================================================
+  {
+    "id": "shri-ganesh-stuti",
+    "type": "Ganesh Stuti",
+    "title": {
+      "devanagari": "॥ श्री गणेश स्तुति ॥",
+      "roman": "Shri Ganesh Stuti"
+    },
+    "verses": [
+      {
+        "devanagari": [
+          "हे गणेश गौरीपुत्र एकदन्त महावीर,",
+          "लम्बोदर भालचन्द्र, सृष्टि के विधाता हैं।",
+          "वे प्रथम पूजनीय देवों में हैं सर्वश्रेष्ठ,",
+          "देते ध्यान उसपे हैं, ध्यान जो लगाता है।",
+          "विघ्न के विनाशक हैं स्वामी रिद्धि-सिद्धि के हैं,",
+          "आता जो भी सामने है शीश वो झुकाता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "He Ganesh Gauriputra Ekdanta Mahaveer,",
+          "Lambodara Bhalachandra, Srishti Ke Vidhata Hain.",
+          "Ve Pratham Poojaniya Devon Mein Hain Sarvashreshtha,",
+          "Dete Dhyan Uspe Hain, Dhyan Jo Lagata Hai.",
+          "Vighna Ke Vinashak Hain Swami Riddhi-Siddhi Ke Hain,",
+          "Aata Jo Bhi Samne Hai Sheesh Vo Jhukata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      },
+      {
+        "devanagari": [
+          "अष्टसिद्धि-बुद्धि-ज्ञान-भक्ति के निधान प्रभु,",
+          "चरणों में आपकी जो प्रीति नित लगाता है।",
+          "मूषक की असवारी साजे, मोदक अति प्यारे लगे,",
+          "जन-जन के जीवन से संकट मिटाता है।",
+          "मोहि-मोहि रूप देखि जग यह निहाल होवे,",
+          "नाम तेरा जप के ही भव तर जाता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "Ashtasiddhi-Buddhi-Gyan-Bhakti Ke Nidhan Prabhu,",
+          "Charanon Mein Aapki Jo Preeti Nit Lagata Hai.",
+          "Mooshak Ki Asavari Saje, Modak Ati Pyare Lage,",
+          "Jan-Jan Ke Jeevan Se Sankat Mitata Hai.",
+          "Mohi-Mohi Roop Dekhi Jag Yah Nihal Hove,",
+          "Naam Tera Jap Ke Hee Bhav Tar Jata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      },
+      {
+        "devanagari": [
+          "गौरीपुत्र विघ्नराज ज्ञान के आगार स्वामी,",
+          "शरण तिहारी जो भी श्रद्धा से आता है।",
+          "सिंदूर सोहे अंग, माथे चंद्र की छटा न्यारी,",
+          "भक्तन के हेत प्रभु संकट उठाता है।",
+          "मंगलमयी मूरति से पावन दिशाएँ होवें,",
+          "सकल मनोरथ को पल में पुराता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "Gauriputra Vighnaraj Gyan Ke Aagar Swami,",
+          "Sharan Tihari Jo Bhi Shraddha Se Aata Hai.",
+          "Sindoor Sohe Ang, Mathe Chandra Ki Chhata Nyari,",
+          "Bhaktan Ke Het Prabhu Sankat Uthata Hai.",
+          "Mangalamayi Murati Se Pawan Dishaen Hoven,",
+          "Sakal Manorath Ko Pal Mein Purata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      }
+    ]
+  },
+  // ========================================================
+  // 8. Shlokas
+  // ========================================================
+  {
+    "id": "shloks",
+    "type": "Shloka / Mantra Collection",
+    "title": {
+      "devanagari": "श्लोक",
+      "roman": "Shlok's"
+    },
+    "verses": [
+      {
+        "devanagari": [
+          "कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारम्।",
+          "सदा वसन्तं हृदयारविन्दे भवं भवानीसहितं नमामि॥"
+        ],
+        "roman": [
+          "Karpura-Gauram Karuna-Avataram Sansara-Saaram Bhujagendra-Haram |",
+          "Sada Vasantam Hridayaravinde Bhavam Bhavani-Sahitam Namami ||"
+        ]
+      },
+      {
+        "devanagari": [
+          "मंगलम भगवान विष्णु, मंगलम गरुड़ध्वजः ।",
+          "मंगलम पुन्डरी काक्षो, मंगलायतनो हरि ॥"
+        ],
+        "roman": [
+          "Mangalam Bhagawan Vishnu, Mangalam Garudadhwajah |",
+          "Mangalam Pundari Kaksho, Mangalayatano Hari ||"
+        ]
+      },
+      {
+        "devanagari": [
+          "सर्व मंगल मांगल्ये शिवे सर्वार्थ साधिके ।",
+          "शरण्ये त्र्यम्बके गौरी नारायणी नमोस्तुते ॥"
+        ],
+        "roman": [
+          "Sarva Mangala Maangalye Shive Sarvaartha Saadhike |",
+          "Sharanye Tryambake Gauri Narayani Namostute ||"
+        ]
+      },
+      {
+        "devanagari": [
+          "त्वमेव माता च पिता त्वमेव",
+          "त्वमेव बन्धू च सखा त्वमेव",
+          "त्वमेव विद्या द्रविणं त्वमेव",
+          "त्वमेव सर्वं मम देव देव"
+        ],
+        "roman": [
+          "Tvameva Mata Cha Pita Tvameva",
+          "Tvameva Bandhu Cha Sakha Tvameva",
+          "Tvameva Vidya Dravinam Tvameva",
+          "Tvameva Sarvam Mama Dev Dev"
+        ]
+      },
+      {
+        "devanagari": [
+          "कायेन वाचा मनसेंद्रियैर्वा",
+          "बुद्ध्यात्मना वा प्रकृतेः स्वभावात",
+          "करोमि यद्यत् सकलं परस्मै",
+          "नारायणायेति समर्पयामि ॥"
+        ],
+        "roman": [
+          "Kayena Vacha Manasendriyairva",
+          "Buddhyatmana Va Prakriteh Swabhavat",
+          "Karomi Yadyat Sakalam Parasmai",
+          "Narayanayeti Samarpayami ||"
+        ]
+      },
+      {
+        "devanagari": [
+          "श्री कृष्ण गोविन्द हरे मुरारे",
+          "हे नाथ नारायण वासुदेव ।"
+        ],
+        "roman": [
+          "Shree Krishna Govind Hare Murare",
+          "Hey Nath Narayan Vasudev."
+        ]
+      }
+    ]
+  }
+];
+  // ========================================================
+  // 7. Ghar Me Padharo
+  // ========================================================
+  {
+    "id": "ghar-mai-padharo",
+    "type": "Ganesh Bhajan",
+    "title": {
+      "devanagari": "घर में पधारो गजाननजी",
+      "roman": "Ghar Mai Padharo"
+    },
+    "verses": [
+      {
+        "devanagari": [
+          "घर में पधारो गजाननजी, मेरे घर में पधारो,",
+          "रिद्धि सिद्धि लेके आओ गणराजा, मेरे घर में पधारो।"
+        ],
+        "roman": [
+          "Ghar Mein Padharo Gajananji, Mere Ghar Mein Padharo,",
+          "Riddhi Siddhi Leke Aao Ganraaja, Mere Ghar Mein Padharo."
+        ]
+      },
+      {
+        "devanagari": [
+          "राम जी आना, लक्ष्मण जी आना,",
+          "संग में लाना सीता मैया, मेरे घर में पधारो ॥"
+        ],
+        "roman": [
+          "Ram Jee Aana, Laxman Jee Aana,",
+          "Sang Mein Laana Sita Maiya, Mere Ghar Mein Padharo."
+        ]
+      },
+      {
+        "devanagari": [
+          "ब्रम्हा जी आना, विष्णु जी आना,",
+          "भोले शशंकर जी को ले आना, मेरे घर में पधारो ॥"
+        ],
+        "roman": [
+          "Bramha Jee Aana, Vishnu Jee Aana,",
+          "Bhole Shashankar Jee Ko Le Aana, Mere Ghar Mein Padharo."
+        ]
+      },
+      {
+        "devanagari": [
+          "लक्ष्मी जी आना, गौरी जी आना,",
+          "सरस्वती मैया को ले आना, मेरे घर में पधारो ॥"
+        ],
+        "roman": [
+          "Laxmi Jee Aana, Gauri Jee Aana,",
+          "Saraswati Maiya Ko Le Aana, Mere Ghar Mein Padharo."
+        ]
+      },
+      {
+        "devanagari": [
+          "विघन को हारना, मंगल करना,",
+          "कारज शुभ कर जाना, मेरे घर में पधारो ॥"
+        ],
+        "roman": [
+          "Vighan Ko Haarna, Mangal Karna,",
+          "Kaaraj Shubh Kar Jaana, Mere Ghar Mein Padharo."
+        ]
+      },
+      {
+        "devanagari": [
+          "घर में पधारो गजाननजी, मेरे घर में पधारो,",
+          "रिद्धि सिद्धि लेके आओ गणराजा, मेरे घर में पधारो।"
+        ],
+        "roman": [
+          "Ghar Mein Padharo Gajananji, Mere Ghar Mein Padharo,",
+          "Riddhi Siddhi Leke Aao Ganraaja, Mere Ghar Mein Padharo."
+        ]
+      }
+    ]
+  },
+  // ========================================================
+  // 7. Hey Gannayak
   // ========================================================
 {
-  "id": "ganesha-pancharatnam",
-  "type": "Ganesh Stotra",
+  "id": "hey-gannayak-siddhivinayak",
+  "type": "Ganesh Bhajan",
   "title": {
-    "devanagari": "॥ गणेश पञ्चरत्नम् (मुदाकरात्त मोदकं) ॥",
-    "roman": "Ganesha Pancharatnam (Mudakaratta Modakam)"
+    "devanagari": "हे गणनायक सिद्धिविनायक",
+    "roman": "Hey Gannayak Siddhivinayak"
   },
   "verses": [
     {
       "devanagari": [
-        "मुदाकरात्तमोदकं सदा विमुक्तिसाधकं",
-        "कलाधरावतंसकं विलासिलोकरक्षकम् ।",
-        "अनायकैकनायकं विनाशितेभदैत्यकं",
-        "नताशुभाशुनाशकं नमामि तं विनायकम् ॥ १ ॥"
+        "हे गणनायक सिद्धिविनायक,",
+        "सुन लो मेरी पुकार,",
+        "गजानन विनती बारंबार।"
       ],
       "roman": [
-        "Mudakaratta Modakam Sada Vimukti Sadhakam",
-        "Kaladharavatamsakam Vilasi Loka Rakshakam |",
-        "Anayakaika Nayakam Vinashitebha Daityakam",
-        "Natashubhashu Nashakam Namami Tam Vinayakam || 1 ||"
+        "Hey gannayak siddhivinayak,",
+        "Sunlo meri pukar,",
+        "Gajanan vintee barambar."
       ]
     },
     {
       "devanagari": [
-        "नतेतरातिभीकरं नवोदितार्कभास्वरं",
-        "नमत्सुरारिनिर्जरं नताधिकारिउद्धरम् ।",
-        "वेश्वरं गनेश्वरं गजेश्वरं सिंचेश्वरं",
-        "मयूरपिञ्चभूषणम् समाहितं समाहितम् ॥ २ ॥"
+        "पार्वती शिव के हो दुलारे,",
+        "सब देवों में सबसे न्यारे,",
+        "मूषक चढ़ तुम अब तो आओ,",
+        "करूँ तुम्हारी मनुहार,",
+        "गजानन विनती बारंबार।"
       ],
       "roman": [
-        "Natetarati Bheekaram Navoditarka Bhaswaram",
-        "Namatsurarinarjakam Natadhikari Uddharam |",
-        "Veshwaram Ganeshwaram Gajeshwaram Sincheswaram",
-        "Mayura Pinchhabhooshanam Samahitam Samahitam || 2 ||"
+        "Parvati shiv ke ho dulare,",
+        "Sab devo me sabse nyare,",
+        "Mushak chadh tum ab to aao,",
+        "Karo tumhari manuhar,",
+        "Gajanan vintee barambar."
       ]
     },
     {
       "devanagari": [
-        "समस्तलोकशङ्करं निरस्तदैत्यकुञ्जरं",
-        "दरेतरोदरं वरं वरेभवक्त्रमक्षरम् ।",
-        "कृपाकरं क्षमाकरं मुदाकरं यशस्करं",
-        "मनस्करं नमस्कृतां नमस्करोमि भास्वरम् ॥ ३ ॥"
+        "रिद्धि सिद्धि के तुम हो दाता,",
+        "भक्त जनों के भाग्य विधाता,",
+        "बीच भंवर जो अटके नैया,",
+        "करते भव से पार,",
+        "गजानन विनती बारंबार।"
       ],
       "roman": [
-        "Samasta Loka Shankaram Nirasta Daitya Kunjaram",
-        "Daretarodaram Varam Varebhavaktramaksharam |",
-        "Kripakaram Kshamakaram Mudakaram Yashaskaram",
-        "Manaskaram Namaskritam Namaskaromi Bhaswaram || 3 ||"
+        "Riddhi siddhi ke tum ho data,",
+        "Bhakt jano ke bhagya vidhata,",
+        "Beech bhanvar jo atke naiyaa,",
+        "Karte bhav se paar,",
+        "Gajanan vintee barambar."
       ]
     },
     {
       "devanagari": [
-        "अकिञ्चनार्तिमार्जनं चिरन्तनोक्तिभाजनं",
-        "पुरारिपूर्वनन्दनं सुरारिगर्वचर्वणम् ।",
-        "प्रपञ्चनाशभीषणं धनञ्जयादिभूषणं",
-        "कपोलदानवारणं भजे पुराणवारणम् ॥ ४ ॥"
+        "हे गणनायक सिद्धिविनायक,",
+        "सुन लो मेरी पुकार,",
+        "गजानन विनती बारंबार।"
       ],
       "roman": [
-        "Akinchanarti Marjanam Chirantanokti Bhajanam",
-        "Purari Poorva Nandanam Surari Garva Charvanam |",
-        "Prapancha Nasha Bheeshanam Dhananjayadi Bhooshanam",
-        "Kapola Dana Varanam Bhaje Purana Varanam || 4 ||"
-      ]
-    },
-    {
-      "devanagari": [
-        "नितान्तकान्तदन्तकान्तिमन्तकान्तकात्मजं",
-        "अचिन्त्यरूपमन्तहीनमन्तरायकृन्तनम् ।",
-        "ह्रुदन्तरे निरन्तरं वसन्तमेव योगिनां",
-        "तमेकदन्तमेव तं विचिन्तयामि सन्ततम् ॥ ५ ॥"
-      ],
-      "roman": [
-        "Nitanta Kanta Danta Kanti Mantakantakatmajam",
-        "Achintya Roopam Anta Heenam Antaraya Krintanam |",
-        "Hrudantare Nirantaram Vasantam Eva Yoginam",
-        "Tam Ekadantam Eva Tam Vichintayami Santatam || 5 ||"
-      ]
-    }
-  ]
-},
-
-  // ========================================================
-  // 6. Hey Ganesh Gauri Putra
-  // ========================================================
-  {
-  "id": "shri-ganesh-stuti",
-  "type": "Ganesh Stuti",
-  "title": {
-    "devanagari": "॥ श्री गणेश स्तुति ॥",
-    "roman": "Shri Ganesh Stuti"
-  },
-  "verses": [
-    {
-      "devanagari": [
-        "हे गणेश गौरीपुत्र एकदन्त महावीर,",
-        "लम्बोदर भालचन्द्र, सृष्टि के विधाता हैं।",
-        "वे प्रथम पूजनीय देवों में हैं सर्वश्रेष्ठ,",
-        "देते ध्यान उसपे हैं, ध्यान जो लगाता है।",
-        "विघ्न के विनाशक हैं स्वामी रिद्धि-सिद्धि के हैं,",
-        "आता जो भी सामने है शीश वो झुकाता है।",
-        "सच्चे मन से पुकारे आपको जो उसका तो,",
-        "हर एक काम बिन बाधा बन जाता है।"
-      ],
-      "roman": [
-        "He Ganesh Gauriputra Ekdanta Mahaveer,",
-        "Lambodara Bhalachandra, Srishti Ke Vidhata Hain.",
-        "Ve Pratham Poojaniya Devon Mein Hain Sarvashreshtha,",
-        "Dete Dhyan Uspe Hain, Dhyan Jo Lagata Hai.",
-        "Vighna Ke Vinashak Hain Swami Riddhi-Siddhi Ke Hain,",
-        "Aata Jo Bhi Samne Hai Sheesh Vo Jhukata Hai.",
-        "Sacche Man Se Pukare Aapko Jo Uska To,",
-        "Har Ek Kaam Bin Badha Ban Jata Hai."
-      ]
-    },
-    {
-      "devanagari": [
-        "अष्टसिद्धि-बुद्धि-ज्ञान-भक्ति के निधान प्रभु,",
-        "चरणों में आपकी जो प्रीति नित लगाता है।",
-        "मूषक की असवारी साजे, मोदक अति प्यारे लगे,",
-        "जन-जन के जीवन से संकट मिटाता है।",
-        "मोहि-मोहि रूप देखि जग यह निहाल होवे,",
-        "नाम तेरा जप के ही भव तर जाता है।",
-        "सच्चे मन से पुकारे आपको जो उसका तो,",
-        "हर एक काम बिन बाधा बन जाता है।"
-      ],
-      "roman": [
-        "Ashtasiddhi-Buddhi-Gyan-Bhakti Ke Nidhan Prabhu,",
-        "Charanon Mein Aapki Jo Preeti Nit Lagata Hai.",
-        "Mooshak Ki Asavari Saje, Modak Ati Pyare Lage,",
-        "Jan-Jan Ke Jeevan Se Sankat Mitata Hai.",
-        "Mohi-Mohi Roop Dekhi Jag Yah Nihal Hove,",
-        "Naam Tera Jap Ke Hee Bhav Tar Jata Hai.",
-        "Sacche Man Se Pukare Aapko Jo Uska To,",
-        "Har Ek Kaam Bin Badha Ban Jata Hai."
-      ]
-    },
-    {
-      "devanagari": [
-        "गौरीपुत्र विघ्नराज ज्ञान के आगार स्वामी,",
-        "शरण तिहारी जो भी श्रद्धा से आता है।",
-        "सिंदूर सोहे अंग, माथे चंद्र की छटा न्यारी,",
-        "भक्तन के हेत प्रभु संकट उठाता है।",
-        "मंगलमयी मूरति से पावन दिशाएँ होवें,",
-        "सकल मनोरथ को पल में पुराता है।",
-        "सच्चे मन से पुकारे आपको जो उसका तो,",
-        "हर एक काम बिन बाधा बन जाता है।"
-      ],
-      "roman": [
-        "Gauriputra Vighnaraj Gyan Ke Aagar Swami,",
-        "Sharan Tihari Jo Bhi Shraddha Se Aata Hai.",
-        "Sindoor Sohe Ang, Mathe Chandra Ki Chhata Nyari,",
-        "Bhaktan Ke Het Prabhu Sankat Uthata Hai.",
-        "Mangalamayi Murati Se Pawan Dishaen Hoven,",
-        "Sakal Manorath Ko Pal Mein Purata Hai.",
-        "Sacche Man Se Pukare Aapko Jo Uska To,",
-        "Har Ek Kaam Bin Badha Ban Jata Hai."
+        "Hey gannayak siddhivinayak,",
+        "Sunlo meri pukar,",
+        "Gajanan vintee barambar."
       ]
     }
   ]
 }
-
-];
