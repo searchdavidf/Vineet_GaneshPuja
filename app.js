@@ -1,4 +1,5 @@
 (() => {
+  try {
   const $ = (sel) => document.querySelector(sel);
   const $$ = (sel) => [...document.querySelectorAll(sel)];
 
@@ -369,4 +370,27 @@
       }
     });
   }
+  } catch (err) {
+    console.error('App error:', err);
+    const errorDiv = document.createElement('div');
+    errorDiv.style.cssText = 'position:fixed;top:0;left:0;right:0;background:red;color:white;padding:10px;z-index:9999;font-size:14px;white-space:pre-wrap;word-break:break-all;';
+    errorDiv.textContent = 'Error: ' + err.message + '\n\n' + err.stack;
+    document.body.appendChild(errorDiv);
+  }
+
+// Global error handler
+window.addEventListener('error', (e) => {
+  console.error('Global error:', e.error);
+  const errorDiv = document.createElement('div');
+  errorDiv.style.cssText = 'position:fixed;top:0;left:0;right:0;background:red;color:white;padding:10px;z-index:9999;font-size:14px;white-space:pre-wrap;word-break:break-all;';
+  errorDiv.textContent = 'Global Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno;
+  document.body.appendChild(errorDiv);
+});
+
+// Log that app.js loaded
+console.log('app.js loaded, SONGS defined:', typeof SONGS !== 'undefined');
+if (typeof SONGS !== 'undefined') {
+  console.log('SONGS count:', SONGS.length);
+}
+
 })();
