@@ -247,8 +247,13 @@
   $("#welcomeContinueBtn").addEventListener("click", () => showView("join"));
   $("#backToWelcomeBtn").addEventListener("click", () => showView("welcome"));
 
-  $$(".language-select-card").forEach(btn => {
-    btn.addEventListener("click", () => openReaderFromLanguage(btn.dataset.language));
+  $$("[data-language]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const language = btn.dataset.language;
+      if (language === "devanagari" || language === "roman") {
+        openReaderFromLanguage(language);
+      }
+    });
   });
 
   // Reader
@@ -342,11 +347,26 @@
   updateScriptChoices();
   showView("invitation");
 
+  // Deployment-safe cleanup:
+  // This event app does not need a service worker. Removing old registrations
+  // prevents stale index/app.js combinations after future GitHub deployments.
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js").catch(err => {
-        console.warn("Service worker registration failed:", err);
-      });
+    window.addEventListener("load", async () => {
+      try {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map(registration => registration.unregister()));
+
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(
+            keys
+              .filter(key => key.startsWith("ganesh-songs-"))
+              .map(key => caches.delete(key))
+          );
+        }
+      } catch (err) {
+        console.warn("Old cache cleanup skipped:", err);
+      }
     });
   }
 })();

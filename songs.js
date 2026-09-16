@@ -314,8 +314,11 @@ const SONGS = [
       }
     ]
   },
+
+  
+
   // ========================================================
-  // 4. Ek Dantay
+  // 5. Ek Dantay
   // ========================================================
   {
     "id": "ek-dantay-vakratundaye",
@@ -375,8 +378,88 @@ const SONGS = [
       }
     ]
   },
-    // ========================================================
-  // 6. Shlokas
+
+  // ========================================================
+  // 6. Shri Ganesh Stuti
+  // ========================================================
+  {
+    "id": "shri-ganesh-stuti",
+    "type": "Ganesh Stuti",
+    "title": {
+      "devanagari": "॥ श्री गणेश स्तुति ॥",
+      "roman": "Shri Ganesh Stuti"
+    },
+    "verses": [
+      {
+        "devanagari": [
+          "हे गणेश गौरीपुत्र एकदन्त महावीर,",
+          "लम्बोदर भालचन्द्र, सृष्टि के विधाता हैं।",
+          "वे प्रथम पूजनीय देवों में हैं सर्वश्रेष्ठ,",
+          "देते ध्यान उसपे हैं, ध्यान जो लगाता है।",
+          "विघ्न के विनाशक हैं स्वामी रिद्धि-सिद्धि के हैं,",
+          "आता जो भी सामने है शीश वो झुकाता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "He Ganesh Gauriputra Ekdanta Mahaveer,",
+          "Lambodara Bhalachandra, Srishti Ke Vidhata Hain.",
+          "Ve Pratham Poojaniya Devon Mein Hain Sarvashreshtha,",
+          "Dete Dhyan Uspe Hain, Dhyan Jo Lagata Hai.",
+          "Vighna Ke Vinashak Hain Swami Riddhi-Siddhi Ke Hain,",
+          "Aata Jo Bhi Samne Hai Sheesh Vo Jhukata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      },
+      {
+        "devanagari": [
+          "अष्टसिद्धि-बुद्धि-ज्ञान-भक्ति के निधान प्रभु,",
+          "चरणों में आपकी जो प्रीति नित लगाता है।",
+          "मूषक की असवारी साजे, मोदक अति प्यारे लगे,",
+          "जन-जन के जीवन से संकट मिटाता है।",
+          "मोहि-मोहि रूप देखि जग यह निहाल होवे,",
+          "नाम तेरा जप के ही भव तर जाता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "Ashtasiddhi-Buddhi-Gyan-Bhakti Ke Nidhan Prabhu,",
+          "Charanon Mein Aapki Jo Preeti Nit Lagata Hai.",
+          "Mooshak Ki Asavari Saje, Modak Ati Pyare Lage,",
+          "Jan-Jan Ke Jeevan Se Sankat Mitata Hai.",
+          "Mohi-Mohi Roop Dekhi Jag Yah Nihal Hove,",
+          "Naam Tera Jap Ke Hee Bhav Tar Jata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      },
+      {
+        "devanagari": [
+          "गौरीपुत्र विघ्नराज ज्ञान के आगार स्वामी,",
+          "शरण तिहारी जो भी श्रद्धा से आता है।",
+          "सिंदूर सोहे अंग, माथे चंद्र की छटा न्यारी,",
+          "भक्तन के हेत प्रभु संकट उठाता है।",
+          "मंगलमयी मूरति से पावन दिशाएँ होवें,",
+          "सकल मनोरथ को पल में पुराता है।",
+          "सच्चे मन से पुकारे आपको जो उसका तो,",
+          "हर एक काम बिन बाधा बन जाता है।"
+        ],
+        "roman": [
+          "Gauriputra Vighnaraj Gyan Ke Aagar Swami,",
+          "Sharan Tihari Jo Bhi Shraddha Se Aata Hai.",
+          "Sindoor Sohe Ang, Mathe Chandra Ki Chhata Nyari,",
+          "Bhaktan Ke Het Prabhu Sankat Uthata Hai.",
+          "Mangalamayi Murati Se Pawan Dishaen Hoven,",
+          "Sakal Manorath Ko Pal Mein Purata Hai.",
+          "Sacche Man Se Pukare Aapko Jo Uska To,",
+          "Har Ek Kaam Bin Badha Ban Jata Hai."
+        ]
+      }
+    ]
+  },
+  // ========================================================
+  // 8. Shlokas
   // ========================================================
   {
     "id": "shloks",
@@ -453,80 +536,79 @@ const SONGS = [
           "Shree Krishna Govind Hare Murare",
           "Hey Nath Narayan Vasudev."
         ]
-      }
-
-  // ========================================================
-  // 7. Hey Gannayak
-  // ========================================================
+      },
 {
-  "id": "hey-gannayak-siddhivinayak",
-  "type": "Ganesh Bhajan",
+  "id": "iphone-ho-ya-samsung",
+  "type": "Ganesh Chants / Trendy Slogans",
   "title": {
-    "devanagari": "हे गणनायक सिद्धिविनायक",
-    "roman": "Hey Gannayak Siddhivinayak"
+    "devanagari": "आईफोन हो या सैमसंग (गणपति बाप्पा हैंडसम)",
+    "roman": "iPhone Ho Ya Samsung (Ganpati Bappa Handsome)"
   },
   "verses": [
     {
       "devanagari": [
-        "हे गणनायक सिद्धिविनायक,",
-        "सुन लो मेरी पुकार,",
-        "गजानन विनती बारंबार।"
+        "iPhone हो या Samsung,",
+        "गणपति बाप्पा हैंडसम!"
       ],
       "roman": [
-        "Hey gannayak siddhivinayak,",
-        "Sunlo meri pukar,",
-        "Gajanan vintee barambar."
+        "iPhone ho ya Samsung,",
+        "Ganpati Bappa handsome!"
       ]
     },
     {
       "devanagari": [
-        "पार्वती शिव के हो दुलारे,",
-        "सब देवों में सबसे न्यारे,",
-        "मूषक चढ़ तुम अब तो आओ,",
-        "करूँ तुम्हारी मनुहार,",
-        "गजानन विनती बारंबार।"
+        "China हो या कोरिया,",
+        "गणपति बाप्पा मोरया!"
       ],
       "roman": [
-        "Parvati shiv ke ho dulare,",
-        "Sab devo me sabse nyare,",
-        "Mushak chadh tum ab to aao,",
-        "Karo tumhari manuhar,",
-        "Gajanan vintee barambar."
+        "China ho ya Korea,",
+        "Ganpati Bappa Morya!"
       ]
     },
     {
       "devanagari": [
-        "रिद्धि सिद्धि के तुम हो दाता,",
-        "भक्त जनों के भाग्य विधाता,",
-        "बीच भंवर जो अटके नैया,",
-        "करते भव से पार,",
-        "गजानन विनती बारंबार।"
+        "जलेबी ने फाफड़ा,",
+        "गणपति बाप्पा आफ़ड़ा!"
       ],
       "roman": [
-        "Riddhi siddhi ke tum ho data,",
-        "Bhakt jano ke bhagya vidhata,",
-        "Beech bhanvar jo atke naiyaa,",
-        "Karte bhav se paar,",
-        "Gajanan vintee barambar."
+        "Jalebi ne Fafda,",
+        "Ganpati Bappa Aafda!"
       ]
     },
     {
       "devanagari": [
-        "हे गणनायक सिद्धिविनायक,",
-        "सुन लो मेरी पुकार,",
-        "गजानन विनती बारंबार।"
+        "गली-गली में गड्ढे हैं,",
+        "गणपति सबसे अच्छे हैं!"
       ],
       "roman": [
-        "Hey gannayak siddhivinayak,",
-        "Sunlo meri pukar,",
-        "Gajanan vintee barambar."
+        "Gali-gali mein gaddhe hain,",
+        "Ganpati sabse achhe hain!"
+      ]
+    },
+    {
+      "devanagari": [
+        "एक टमाटर ताज़ा,",
+        "गणपति बाप्पा राजा!"
+      ],
+      "roman": [
+        "Ek tamatar taaza,",
+        "Ganpati Bappa Raja!"
+      ]
+    },
+    {
+      "devanagari": [
+        "Twinkle Twinkle लिटिल स्टार,",
+        "गणपति हैं सुपरस्टार!"
+      ],
+      "roman": [
+        "Twinkle Twinkle little star,",
+        "Ganpati hain superstar!"
       ]
     }
- 
-    ]
-  },
-   // ========================================================
-  // 7. Mudakaratmodkam
+  ]
+}
+// ========================================================
+  // 4. Mudakaratmodkam
   // ========================================================
   {
     "id": "mudakaratmodkam",
@@ -622,8 +704,10 @@ const SONGS = [
       }
     ]
   },
+    ]
+  },
   // ========================================================
-  // 8. Ghar Me Padharo
+  // 7. Ghar Me Padharo
   // ========================================================
   {
     "id": "ghar-mai-padharo",
@@ -695,85 +779,73 @@ const SONGS = [
       }
     ]
   },
- // ========================================================
-  // 9. Shri Ganesh Stuti
   // ========================================================
-  {
-    "id": "shri-ganesh-stuti",
-    "type": "Ganesh Stuti",
-    "title": {
-      "devanagari": "॥ श्री गणेश स्तुति ॥",
-      "roman": "Shri Ganesh Stuti"
-    },
-    "verses": [
-      {
-        "devanagari": [
-          "हे गणेश गौरीपुत्र एकदन्त महावीर,",
-          "लम्बोदर भालचन्द्र, सृष्टि के विधाता हैं।",
-          "वे प्रथम पूजनीय देवों में हैं सर्वश्रेष्ठ,",
-          "देते ध्यान उसपे हैं, ध्यान जो लगाता है।",
-          "विघ्न के विनाशक हैं स्वामी रिद्धि-सिद्धि के हैं,",
-          "आता जो भी सामने है शीश वो झुकाता है।",
-          "सच्चे मन से पुकारे आपको जो उसका तो,",
-          "हर एक काम बिन बाधा बन जाता है।"
-        ],
-        "roman": [
-          "He Ganesh Gauriputra Ekdanta Mahaveer,",
-          "Lambodara Bhalachandra, Srishti Ke Vidhata Hain.",
-          "Ve Pratham Poojaniya Devon Mein Hain Sarvashreshtha,",
-          "Dete Dhyan Uspe Hain, Dhyan Jo Lagata Hai.",
-          "Vighna Ke Vinashak Hain Swami Riddhi-Siddhi Ke Hain,",
-          "Aata Jo Bhi Samne Hai Sheesh Vo Jhukata Hai.",
-          "Sacche Man Se Pukare Aapko Jo Uska To,",
-          "Har Ek Kaam Bin Badha Ban Jata Hai."
-        ]
-      },
-      {
-        "devanagari": [
-          "अष्टसिद्धि-बुद्धि-ज्ञान-भक्ति के निधान प्रभु,",
-          "चरणों में आपकी जो प्रीति नित लगाता है।",
-          "मूषक की असवारी साजे, मोदक अति प्यारे लगे,",
-          "जन-जन के जीवन से संकट मिटाता है।",
-          "मोहि-मोहि रूप देखि जग यह निहाल होवे,",
-          "नाम तेरा जप के ही भव तर जाता है।",
-          "सच्चे मन से पुकारे आपको जो उसका तो,",
-          "हर एक काम बिन बाधा बन जाता है।"
-        ],
-        "roman": [
-          "Ashtasiddhi-Buddhi-Gyan-Bhakti Ke Nidhan Prabhu,",
-          "Charanon Mein Aapki Jo Preeti Nit Lagata Hai.",
-          "Mooshak Ki Asavari Saje, Modak Ati Pyare Lage,",
-          "Jan-Jan Ke Jeevan Se Sankat Mitata Hai.",
-          "Mohi-Mohi Roop Dekhi Jag Yah Nihal Hove,",
-          "Naam Tera Jap Ke Hee Bhav Tar Jata Hai.",
-          "Sacche Man Se Pukare Aapko Jo Uska To,",
-          "Har Ek Kaam Bin Badha Ban Jata Hai."
-        ]
-      },
-      {
-        "devanagari": [
-          "गौरीपुत्र विघ्नराज ज्ञान के आगार स्वामी,",
-          "शरण तिहारी जो भी श्रद्धा से आता है।",
-          "सिंदूर सोहे अंग, माथे चंद्र की छटा न्यारी,",
-          "भक्तन के हेत प्रभु संकट उठाता है।",
-          "मंगलमयी मूरति से पावन दिशाएँ होवें,",
-          "सकल मनोरथ को पल में पुराता है।",
-          "सच्चे मन से पुकारे आपको जो उसका तो,",
-          "हर एक काम बिन बाधा बन जाता है।"
-        ],
-        "roman": [
-          "Gauriputra Vighnaraj Gyan Ke Aagar Swami,",
-          "Sharan Tihari Jo Bhi Shraddha Se Aata Hai.",
-          "Sindoor Sohe Ang, Mathe Chandra Ki Chhata Nyari,",
-          "Bhaktan Ke Het Prabhu Sankat Uthata Hai.",
-          "Mangalamayi Murati Se Pawan Dishaen Hoven,",
-          "Sakal Manorath Ko Pal Mein Purata Hai.",
-          "Sacche Man Se Pukare Aapko Jo Uska To,",
-          "Har Ek Kaam Bin Badha Ban Jata Hai."
-        ]
-      }
-    ]
+  // 7. Hey Gannayak
+  // ========================================================
+{
+  "id": "hey-gannayak-siddhivinayak",
+  "type": "Ganesh Bhajan",
+  "title": {
+    "devanagari": "हे गणनायक सिद्धिविनायक",
+    "roman": "Hey Gannayak Siddhivinayak"
   },
+  "verses": [
+    {
+      "devanagari": [
+        "हे गणनायक सिद्धिविनायक,",
+        "सुन लो मेरी पुकार,",
+        "गजानन विनती बारंबार।"
+      ],
+      "roman": [
+        "Hey gannayak siddhivinayak,",
+        "Sunlo meri pukar,",
+        "Gajanan vintee barambar."
+      ]
+    },
+    {
+      "devanagari": [
+        "पार्वती शिव के हो दुलारे,",
+        "सब देवों में सबसे न्यारे,",
+        "मूषक चढ़ तुम अब तो आओ,",
+        "करूँ तुम्हारी मनुहार,",
+        "गजानन विनती बारंबार।"
+      ],
+      "roman": [
+        "Parvati shiv ke ho dulare,",
+        "Sab devo me sabse nyare,",
+        "Mushak chadh tum ab to aao,",
+        "Karo tumhari manuhar,",
+        "Gajanan vintee barambar."
+      ]
+    },
+    {
+      "devanagari": [
+        "रिद्धि सिद्धि के तुम हो दाता,",
+        "भक्त जनों के भाग्य विधाता,",
+        "बीच भंवर जो अटके नैया,",
+        "करते भव से पार,",
+        "गजानन विनती बारंबार।"
+      ],
+      "roman": [
+        "Riddhi siddhi ke tum ho data,",
+        "Bhakt jano ke bhagya vidhata,",
+        "Beech bhanvar jo atke naiyaa,",
+        "Karte bhav se paar,",
+        "Gajanan vintee barambar."
+      ]
+    },
+    {
+      "devanagari": [
+        "हे गणनायक सिद्धिविनायक,",
+        "सुन लो मेरी पुकार,",
+        "गजानन विनती बारंबार।"
+      ],
+      "roman": [
+        "Hey gannayak siddhivinayak,",
+        "Sunlo meri pukar,",
+        "Gajanan vintee barambar."
+      ]
+    }
   ]
 }
 ];
