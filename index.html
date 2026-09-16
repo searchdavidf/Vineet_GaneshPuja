@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6a171b">
+<title>Ganesh Chaturthi Aarti & Bhajans</title>
+<style>
+
+:root{
+  --maroon:#6a171b;--dark:#3a0d10;--gold:#c9942e;
+  --paper:#fffaf0;--ink:#30231e;--muted:#786b63;
+  --lyric-size:1.42rem;--line-height:1.72;--verse-gap:2.25rem
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(180deg,#fffaf0,#fff8ed);
+  color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a{color:inherit}
+button{font:inherit;cursor:pointer;touch-action:manipulation}
+
+body{
+  min-height:100dvh;
+  background:
+    radial-gradient(circle at 14% 12%,rgba(218,166,57,.18),transparent 28%),
+    linear-gradient(180deg,#fffaf0,#f8edd5)
+}
+.welcome{
+  width:min(100%,1000px);min-height:100dvh;margin:auto;
+  padding:20px 16px 28px;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,430px);
+  gap:40px;align-items:center
+}
+.copy{max-width:540px}
+.kicker{margin:0 0 10px;color:var(--maroon);font-weight:800}
+h1{
+  margin:0;color:var(--dark);font-family:Georgia,serif;
+  font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.01
+}
+h1 span{color:var(--maroon)}
+.message{color:var(--muted);line-height:1.65;margin:16px 0 18px}
+.join{
+  padding:17px;border:1px solid rgba(110,70,20,.13);
+  border-radius:22px;background:rgba(255,255,255,.75)
+}
+.join h2{margin:0 0 4px;color:var(--maroon);font-size:1rem}
+.join p{margin:0 0 12px;color:var(--muted);font-size:.84rem}
+.languages{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.language{
+  min-height:68px;text-decoration:none;
+  border:1px solid rgba(106,23,27,.12);border-radius:17px;background:white;
+  display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;
+  padding:10px;text-align:left
+}
+.language:active{transform:scale(.985)}
+.mark{
+  width:40px;height:40px;border-radius:13px;display:grid;place-items:center;
+  background:var(--maroon);color:#fff8e8;font-weight:800;font-size:1.15rem
+}
+.language strong{display:block;color:var(--maroon)}
+.language small{display:block;color:var(--muted);margin-top:2px}
+.blessing{margin:14px 0 0;color:var(--maroon);text-align:center;font-weight:800}
+.poster{justify-self:center;width:min(100%,430px)}
+.poster img{
+  display:block;width:100%;max-height:84dvh;object-fit:contain;
+  border-radius:22px;box-shadow:0 24px 55px rgba(55,24,8,.18)
+}
+@media(max-width:760px){
+  .welcome{grid-template-columns:1fr;align-content:start;gap:18px;padding-top:16px}
+  .copy{text-align:center;justify-self:center}
+  h1{font-size:clamp(2.2rem,10vw,3rem)}
+  .message{margin:10px auto 14px}
+  .poster{width:min(86%,350px)}
+  .poster img{max-height:39dvh}
+  .languages{gap:8px}
+  .language{min-height:62px;grid-template-columns:36px 1fr;padding:8px}
+  .mark{width:36px;height:36px}
+}
+</style>
+</head>
+<body>
+<!-- GANESH APP BUILD: V13 FINAL SONGS STATIC -->
+<main class="welcome">
+  <section class="copy">
+    <p class="kicker">श्री गणेशाय नमः</p>
+    <h1>Welcome to our <span>Ganesh Chaturthi</span></h1>
+    <p class="message">
+      We are delighted to celebrate with you. Join us for the aarti and bhajans,
+      and sing along using the script that is easiest for you to read.
+    </p>
+
+    <div class="join">
+      <h2>Join the Aarti</h2>
+      <p>Choose your reading script to begin.</p>
+
+      <div class="languages">
+        <a class="language" href="hindi/01.html">
+          <span class="mark">अ</span>
+          <span><strong>हिन्दी</strong><small>देवनागरी</small></span>
+        </a>
+
+        <a class="language" href="english/01.html">
+          <span class="mark">A</span>
+          <span><strong>English</strong><small>Roman Script</small></span>
+        </a>
+      </div>
+    </div>
+
+    <p class="blessing">गणपति बप्पा मोरया • मंगल मूर्ति मोरया</p>
+  </section>
+
+  <section class="poster">
+    <img src="assets/invitation.jpeg" alt="Ganesh Chaturthi invitation">
+  </section>
+</main>
+</body>
+</html>

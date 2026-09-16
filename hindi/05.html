@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6a171b">
+<title>एकदंताय वक्रतुण्डाय</title>
+<style>
+:root{
+  --maroon:#6a171b;--dark:#3a0d10;--gold:#c9942e;
+  --paper:#fffaf0;--ink:#30231e;--muted:#786b63;
+  --lyric-size:1.42rem;--line-height:1.72;--verse-gap:2.25rem
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(180deg,#fffaf0,#fff8ed);
+  color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+a{color:inherit}
+button{font:inherit;cursor:pointer;touch-action:manipulation}
+
+.topbar{
+  position:sticky;top:0;z-index:10;min-height:64px;padding:10px 12px;
+  display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:8px;align-items:center;
+  background:rgba(255,250,240,.96);border-bottom:1px solid rgba(110,70,20,.08)
+}
+.home{
+  width:42px;height:42px;border-radius:13px;background:rgba(106,23,27,.07);
+  display:grid;place-items:center;text-decoration:none;color:var(--maroon);font-size:1.2rem
+}
+.head{text-align:center;min-width:0}
+.head small{display:block;color:var(--gold);font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+.head strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.82rem}
+.switch{
+  min-width:78px;height:42px;border:1px solid rgba(106,23,27,.1);border-radius:13px;
+  background:#fff;color:var(--maroon);display:grid;place-items:center;text-decoration:none;
+  font-weight:800;font-size:.77rem;padding:0 9px
+}
+.reader{width:min(100%,760px);margin:auto;padding:30px 16px 44px}
+.title{text-align:center;margin-bottom:30px}
+.title small{color:var(--gold);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.title h1{
+  margin:8px 0 0;color:var(--maroon);font-family:"Nirmala UI","Mangal",Georgia,serif;
+  font-size:clamp(2rem,8vw,3.4rem);line-height:1.16
+}
+.lyrics{
+  text-align:center;font-family:"Nirmala UI","Mangal",Georgia,serif;
+  font-size:var(--lyric-size);line-height:var(--line-height)
+}
+.verse{max-width:34ch;margin:0 auto var(--verse-gap)}
+.verse p{margin:.38em 0}
+.sep{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.5;margin:-.4rem auto 1.65rem}
+.end{
+  margin-top:50px;padding-top:22px;border-top:1px solid rgba(120,80,25,.13)
+}
+.nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nav a{
+  min-height:62px;border-radius:16px;padding:10px 14px;font-weight:800;
+  display:grid;place-items:center;text-decoration:none;text-align:center
+}
+.prev{border:1px solid rgba(106,23,27,.12);background:#fff;color:var(--maroon)}
+.next{background:var(--maroon);color:#fff}
+.tools{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+details{
+  border:1px solid rgba(106,23,27,.1);border-radius:15px;background:#fff;
+  padding:0 12px
+}
+summary{min-height:42px;display:flex;align-items:center;color:var(--maroon);font-weight:800;cursor:pointer}
+.toolbody{padding:0 0 12px}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:7px}
+.controls button{
+  min-height:40px;border:1px solid rgba(106,23,27,.1);border-radius:12px;
+  background:#fff;color:var(--maroon);font-weight:800
+}
+.songlinks{display:grid;gap:6px;margin-top:8px;max-height:280px;overflow:auto}
+.songlinks a{
+  padding:9px 10px;border-radius:11px;background:#fff8ea;text-decoration:none;color:var(--ink)
+}
+@media(max-width:480px){.nav{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="home" href="../index.html" aria-label="Welcome">⌂</a>
+  <div class="head">
+    <small>Ganesh Stuti / Song</small>
+    <strong>एकदंताय वक्रतुण्डाय</strong>
+  </div>
+  <a class="switch" href="../english/05.html">English</a>
+</header>
+
+<main class="reader">
+  <header class="title">
+    <small>5 of 10</small>
+    <h1>एकदंताय वक्रतुण्डाय</h1>
+  </header>
+
+  <article class="lyrics">
+    <section class="verse"><p>गणनायकाय गणदेवताय गणाध्यक्षाय धीमहि</p><p>गुणशरीराय गुणमण्डिताय गुणेशानाय धीमहि</p><p>गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि</p><p>एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि</p><p>गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि</p></section><div class="sep"></div><section class="verse"><p>गानसाराय गानतत्त्वाय गानगोत्राय धीमहि</p><p>गूढगुल्फाय गन्धमत्ताय गोजयप्रदाय धीमहि</p><p>गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि</p><p>एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि</p><p>गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि</p></section><div class="sep"></div><section class="verse"><p>गौरीप्रणयाय गौरीप्रवणाय गौरभावाय धीमहि</p><p>गोसहस्राय गोवर्धनाय गोपगोपाय धीमहि</p><p>गुणातीताय गुणाधीशाय गुणप्रविष्टाय धीमहि</p><p>एकदंताय वक्रतुण्डाय गौरीतनयाय धीमहि</p><p>गजेशानाय भालचन्द्राय श्रीगणेशाय धीमहि</p></section>
+  </article>
+
+  <section class="end">
+    <nav class="nav">
+      <a class="prev" href="04.html">‹ Previous</a>
+      <a class="next" href="06.html">Next ›</a>
+    </nav>
+
+    <div class="tools">
+      <details>
+        <summary>☰ All Songs</summary>
+        <div class="toolbody songlinks"><a href="01.html">1. जय गणेश जय गणेश जय गणेश देवा</a>
+<a href="02.html">2. सुख करता दुखहर्ता</a>
+<a href="03.html">3. शेंदुर लाल चढ़ायो</a>
+<a href="04.html">4. मुदाकरात्तमोदकं (गणेश पञ्चरत्नम्)</a>
+<a href="05.html">5. एकदंताय वक्रतुण्डाय</a>
+<a href="06.html">6. ॥ श्री गणेश स्तुति ॥</a>
+<a href="07.html">7. घर में पधारो गजाननजी</a>
+<a href="08.html">8. हे गणनायक सिद्धिविनायक</a>
+<a href="09.html">9. श्लोक</a>
+<a href="10.html">10. आईफोन हो या सैमसंग (गणपति बाप्पा हैंडसम)</a></div>
+      </details>
+
+      <details>
+        <summary>Aa Reading</summary>
+        <div class="toolbody">
+          <strong>Text size</strong>
+          <div class="controls">
+            <button type="button" onclick="setSize('small')">A−</button>
+            <button type="button" onclick="setSize('normal')">A</button>
+            <button type="button" onclick="setSize('large')">A+</button>
+          </div>
+
+          <strong style="display:block;margin-top:12px">Line spacing</strong>
+          <div class="controls">
+            <button type="button" onclick="setSpacing('compact')">Compact</button>
+            <button type="button" onclick="setSpacing('comfort')">Comfort</button>
+            <button type="button" onclick="setSpacing('spacious')">Spacious</button>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<script>
+function setSize(mode){
+  var sizes={small:"1.18rem",normal:"1.42rem",large:"1.70rem"};
+  document.documentElement.style.setProperty("--lyric-size",sizes[mode]||sizes.normal);
+}
+function setSpacing(mode){
+  var line={compact:"1.45",comfort:"1.72",spacious:"2.05"};
+  var gap={compact:"1.55rem",comfort:"2.25rem",spacious:"3.05rem"};
+  document.documentElement.style.setProperty("--line-height",line[mode]||line.comfort);
+  document.documentElement.style.setProperty("--verse-gap",gap[mode]||gap.comfort);
+}
+</script>
+</body>
+</html>
