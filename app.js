@@ -3,7 +3,9 @@
   const $$ = (sel) => [...document.querySelectorAll(sel)];
 
   const views = {
+    invitation: $("#invitationView"),
     welcome: $("#welcomeView"),
+    join: $("#joinView"),
     reader: $("#readerView"),
     closing: $("#closingView")
   };
@@ -35,6 +37,14 @@
       el.classList.toggle("view-active", key === name);
     });
     window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function resetReaderState() {
+    state.currentIndex = 0;
+    state.fontScale = 1;
+    state.spacing = "comfortable";
+    applyFontScale();
+    applySpacing();
   }
 
   function escapeHtml(str) {
@@ -69,7 +79,6 @@
       return `<section class="verse">${body}</section>${sep}`;
     }).join("");
 
-    // Previous / next labels
     const prevSong = SONGS[state.currentIndex - 1];
     const nextSong = SONGS[state.currentIndex + 1];
 
@@ -224,26 +233,28 @@
     $("#wakeBtn").setAttribute("aria-checked", state.wakeLock ? "true" : "false");
   }
 
-  // Welcome
-  $$(".language-card").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.script = btn.dataset.language;
-      state.currentIndex = 0;
-      state.fontScale = 1;
-      state.spacing = "comfortable";
-      renderSong();
-      showView("reader");
-    });
+  function openReaderFromLanguage(language) {
+    state.script = language;
+    resetReaderState();
+    renderSong();
+    showView("reader");
+  }
+
+  // Intro flow
+  $("#invitationContinueBtn").addEventListener("click", () => showView("welcome"));
+  $("#skipToJoinBtn").addEventListener("click", () => showView("join"));
+  $("#backToInvitationBtn").addEventListener("click", () => showView("invitation"));
+  $("#welcomeContinueBtn").addEventListener("click", () => showView("join"));
+  $("#backToWelcomeBtn").addEventListener("click", () => showView("welcome"));
+
+  $$(".language-select-card").forEach(btn => {
+    btn.addEventListener("click", () => openReaderFromLanguage(btn.dataset.language));
   });
 
   // Reader
   $("#homeBtn").addEventListener("click", () => {
-    state.currentIndex = 0;
-    state.fontScale = 1;
-    state.spacing = "comfortable";
-    applyFontScale();
-    applySpacing();
-    showView("welcome");
+    resetReaderState();
+    showView("invitation");
   });
 
   $("#songPickerBtn").addEventListener("click", () => openSheet("songDrawer"));
@@ -293,21 +304,16 @@
 
   // Closing
   $("#restartBtn").addEventListener("click", () => {
-    state.currentIndex = 0;
-    state.fontScale = 1;
-    state.spacing = "comfortable";
-    renderSong();
-    showView("reader");
+    resetReaderState();
+    showView("join");
   });
 
   $("#inviteBtn").addEventListener("click", () => {
-    state.currentIndex = 0;
-    state.fontScale = 1;
-    state.spacing = "comfortable";
-    showView("welcome");
+    resetReaderState();
+    showView("invitation");
   });
 
-  // Swipe navigation (reader only, horizontal gesture)
+  // Swipe navigation (reader only)
   let touchStartX = null;
   let touchStartY = null;
 
@@ -330,17 +336,11 @@
     touchStartX = touchStartY = null;
   }, { passive:true });
 
-  // Initial state: ALWAYS reset on refresh.
-  state.script = "devanagari";
-  state.currentIndex = 0;
-  state.fontScale = 1;
-  state.spacing = "comfortable";
-
-  applyFontScale();
-  applySpacing();
+  // Initial state
+  resetReaderState();
   renderSongList();
   updateScriptChoices();
-  showView("welcome");
+  showView("invitation");
 
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {

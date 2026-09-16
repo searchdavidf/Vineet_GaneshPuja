@@ -166,3 +166,15 @@ This helps visitors receive the latest version after deployment.
 - Previous / next navigation and reading controls are placed after the lyrics, so they only appear when the user reaches the bottom of the song.
 - Reading settings still support font size, line spacing and screen wake lock.
 - Refresh always resets to the welcome page.
+
+
+## V7 intro flow redesign
+
+- The landing experience is now divided into 3 clear screens:
+  1. Invitation
+  2. Welcome
+  3. Join Aarti + language selection
+- Refresh starts from the invitation screen.
+- Language selection opens the first aarti immediately.
+- Home button from the reader returns to the invitation screen.
+- Reader remains clean with bottom-of-song navigation and reading controls.

@@ -16,37 +16,81 @@
 <body>
   <main id="app">
 
-    <!-- WELCOME -->
-    <section id="welcomeView" class="view view-active welcome-view" aria-labelledby="welcomeTitle">
-      <div class="welcome-shell">
-        <div class="welcome-copy-panel reveal">
-          <p class="festival-kicker">श्री गणेशाय नमः</p>
-          <h1 id="welcomeTitle">Welcome to our <span>Ganesh Chaturthi</span></h1>
-          <p class="welcome-copy">
-            Join us in aarti and bhajans. Choose the script you are most comfortable reading.
-          </p>
+    <!-- STEP 1: INVITATION -->
+    <section id="invitationView" class="view view-active intro-view invitation-view" aria-labelledby="invitationTitle">
+      <div class="intro-shell">
+        <p class="step-pill">Step 1 of 3</p>
+        <h1 id="invitationTitle" class="intro-title">Our Ganesh Chaturthi Invitation</h1>
+        <p class="intro-copy">Please have a look at the invitation before joining the aarti.</p>
 
-          <div class="start-card">
-            <p class="start-label">Choose lyrics language</p>
-            <div class="language-grid" role="group" aria-label="Choose lyrics script">
-              <button class="language-card" data-language="devanagari">
-                <span class="language-symbol">अ</span>
-                <span><strong>हिन्दी</strong><small>देवनागरी</small></span>
-              </button>
-              <button class="language-card" data-language="roman">
-                <span class="language-symbol">A</span>
-                <span><strong>English</strong><small>Roman script</small></span>
-              </button>
-            </div>
-            <p class="tap-hint">Tap a language to begin the first aarti</p>
-          </div>
+        <div class="poster-stage reveal">
+          <img class="invite-poster" src="assets/invitation.jpeg" alt="Ganesh Chaturthi invitation" loading="eager" />
+        </div>
 
+        <div class="intro-actions">
+          <button id="invitationContinueBtn" class="primary-btn wide-btn">Continue</button>
+          <button id="skipToJoinBtn" class="text-btn">Skip to language selection</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 2: WELCOME -->
+    <section id="welcomeView" class="view intro-view welcome-step-view" aria-labelledby="welcomeTitle">
+      <div class="intro-shell narrow">
+        <p class="step-pill">Step 2 of 3</p>
+        <p class="festival-kicker">श्री गणेशाय नमः</p>
+        <h1 id="welcomeTitle" class="intro-title">Welcome to our<br><span>Ganesh Chaturthi Celebration</span></h1>
+        <p class="intro-copy">
+          We are delighted to celebrate this auspicious occasion with you and your family.
+          May Bappa bless this gathering with joy, devotion and prosperity.
+        </p>
+
+        <div class="welcome-blessing-card">
+          <p>Let us come together in prayer, aarti and bhajans.</p>
           <p class="welcome-blessing">गणपति बप्पा मोरया • मंगल मूर्ति मोरया</p>
         </div>
 
-        <div class="poster-wrap reveal reveal-delay">
-          <div class="poster-label">Our Invitation</div>
-          <img class="invite-poster" src="assets/invitation.jpeg" alt="Ganesh Chaturthi invitation" loading="eager" />
+        <div class="intro-actions split-actions">
+          <button id="backToInvitationBtn" class="secondary-btn">Back</button>
+          <button id="welcomeContinueBtn" class="primary-btn">Continue to Aarti</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3: JOIN / LANGUAGE -->
+    <section id="joinView" class="view intro-view join-view" aria-labelledby="joinTitle">
+      <div class="intro-shell narrow">
+        <p class="step-pill">Step 3 of 3</p>
+        <p class="festival-kicker">🙏 Join us for Aarti</p>
+        <h1 id="joinTitle" class="intro-title">Choose your reading script</h1>
+        <p class="intro-copy">
+          Sing along with us using the lyrics. Select the script you are most comfortable reading.
+        </p>
+
+        <div class="language-stack" role="group" aria-label="Choose lyrics script">
+          <button class="language-select-card" data-language="devanagari">
+            <span class="language-badge">अ</span>
+            <span class="language-content">
+              <strong>हिन्दी</strong>
+              <small>देवनागरी में पढ़ें</small>
+            </span>
+            <span class="language-go">→</span>
+          </button>
+
+          <button class="language-select-card" data-language="roman">
+            <span class="language-badge">A</span>
+            <span class="language-content">
+              <strong>English</strong>
+              <small>Read in Roman Script</small>
+            </span>
+            <span class="language-go">→</span>
+          </button>
+        </div>
+
+        <p class="join-note">Tap a language to open the first aarti.</p>
+
+        <div class="intro-actions split-actions">
+          <button id="backToWelcomeBtn" class="secondary-btn">Back</button>
         </div>
       </div>
     </section>
@@ -54,7 +98,7 @@
     <!-- READER -->
     <section id="readerView" class="view reader-view" aria-live="polite">
       <header class="reader-header">
-        <button id="homeBtn" class="header-icon-btn" aria-label="Back to welcome">⌂</button>
+        <button id="homeBtn" class="header-icon-btn" aria-label="Back to invitation">⌂</button>
 
         <button id="songPickerBtn" class="song-picker-head" aria-label="Choose song">
           <span id="songType">Ganesh Aarti</span>
@@ -76,7 +120,6 @@
 
         <article id="lyrics" class="lyrics" tabindex="0"></article>
 
-        <!-- Appears naturally only at the end of the song -->
         <section class="end-controls" aria-label="End of song controls">
           <p class="end-label">End of song</p>
 
@@ -128,7 +171,6 @@
       </div>
       <button class="header-icon-btn" data-close-sheet="songDrawer" aria-label="Close">×</button>
     </div>
-
     <div id="songList" class="song-list"></div>
   </aside>
 
